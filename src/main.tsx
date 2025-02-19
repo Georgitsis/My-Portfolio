@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //import './index.css'
 import "@mantine/core/styles.css";
-import MainPage from "./MainPage";
+import MainPage from "./Pages/MainPage";
 
 import { MantineProvider } from "@mantine/core";
 
