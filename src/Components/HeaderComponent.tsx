@@ -1,7 +1,7 @@
-import { Group, Stack, Text } from "@mantine/core";
+import { Group, Stack } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
-import classes from "./HeaderComponent.module.css";
+//import classes from "./ComponentStyles.module.css";
 import { useHover } from "@mantine/hooks";
 export default function HeaderComponent() {
   return (

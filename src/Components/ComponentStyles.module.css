@@ -1,0 +1,31 @@
+.BannerName {
+  font-size: clamp(1px, 7.5vw, 100px);
+  font-weight: 900;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, white 50%, #fdd6d5 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 100% 200%;
+  transition: background-size 0.8s;
+  transition-delay: 0.4s;
+}
+
+.BannerNameTransitioned {
+  background-size: 100% 100%;
+}
+
+.BannerSubText {
+  font-size: clamp(1px, 4vw, 100px);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.ColourFilter {
+  z-index: 2;
+  mix-blend-mode: darken;
+  background-color: #fdd6d5;
+  position: relative;
+  --calculated-height: clamp(1px, 6vw, 50px);
+  min-height: var(--calculated-height);
+  top: calc(-1 * var(--calculated-height));
+}

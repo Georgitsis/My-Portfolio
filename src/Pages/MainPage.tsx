@@ -1,16 +1,17 @@
-import { AppShell, Stack } from "@mantine/core";
+import { AppShell } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
 import HeaderComponent from "../Components/HeaderComponent";
+import BannerComponent from "../Components/NameBanner";
 
 export default function MainPage() {
   const pinned = useHeadroom({ fixedAt: 120 });
   return (
-    <AppShell header={{ height: 100, collapsed: !pinned, offset: false }} padding="md" withBorder={false}>
+    <AppShell header={{ height: 100, collapsed: !pinned, offset: true }} padding="md" withBorder={false}>
       <AppShell.Header>
         <HeaderComponent />
       </AppShell.Header>
       <AppShell.Main>
-        <Stack align="stretch" justify="flex-start" gap="xl"></Stack>
+        <BannerComponent />
       </AppShell.Main>
     </AppShell>
   );
