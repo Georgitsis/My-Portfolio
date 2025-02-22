@@ -15,17 +15,29 @@
   background-size: 100% 100%;
 }
 
+.NavBarElement {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s, transform 0.8s;
+  transition-delay: 0.4s;
+}
+
+.NavBarElementTransitioned {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .BannerSubText {
   font-size: clamp(1px, 4vw, 100px);
   white-space: nowrap;
   align-self: flex-start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
+  transition-delay: 0.4s;
 }
-.ColourFilter {
-  z-index: 2;
-  mix-blend-mode: darken;
-  background-color: #fdd6d5;
-  position: relative;
-  --calculated-height: clamp(1px, 6vw, 50px);
-  min-height: var(--calculated-height);
-  top: calc(-1 * var(--calculated-height));
+
+.BannerSubTextTransitioned {
+  opacity: 1;
+  transform: translateY(0);
 }
