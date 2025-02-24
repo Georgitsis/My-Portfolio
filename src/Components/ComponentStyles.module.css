@@ -1,8 +1,10 @@
 .BannerName {
+  position: relative;
+  top: calc(-1 * clamp(1px, 5.65vw, 70px));
   font-size: clamp(1px, 7.5vw, 100px);
   font-weight: 900;
   white-space: nowrap;
-  background: linear-gradient(to bottom, white 50%, #fdd6d5 50%);
+  background: linear-gradient(to bottom, white 50%, #aacdfc 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -17,7 +19,7 @@
 
 .NavBarElement {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-25px);
   transition: opacity 0.8s, transform 0.8s;
   transition-delay: 0.4s;
 }
@@ -28,11 +30,13 @@
 }
 
 .BannerSubText {
+  position: relative;
+  top: calc(-1 * clamp(1px, 5.65vw, 70px));
   font-size: clamp(1px, 4vw, 100px);
   white-space: nowrap;
   align-self: flex-start;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(25px);
   transition: opacity 0.8s, transform 0.8s;
   transition-delay: 0.4s;
 }
