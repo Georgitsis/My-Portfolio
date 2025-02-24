@@ -17,37 +17,28 @@
   background-size: 100% 100%;
 }
 
-.NavBarElement {
-  opacity: 0;
-  transform: translateY(-25px);
-  transition: opacity 0.8s, transform 0.8s;
-  transition-delay: 0.4s;
-}
-
-.NavBarElementTransitioned {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .BannerSubText {
-  position: relative;
-  top: calc(-1 * clamp(1px, 5.65vw, 70px));
   font-size: clamp(1px, 4vw, 100px);
   white-space: nowrap;
-  align-self: flex-start;
-  opacity: 0;
-  transform: translateY(25px);
-  transition: opacity 0.8s, transform 0.8s;
-  transition-delay: 0.4s;
-}
-
-.BannerSubTextTransitioned {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .ProfileFotoContainer {
   background: var(--mantine-color-dark-6);
   border-top-left-radius: var(--mantine-radius-xl);
   border-top-right-radius: var(--mantine-radius-xl);
+}
+@keyframes pointing {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.Finger {
+  display: inline-block;
+  font-size: clamp(1px, 4vw, 100px);
+  animation: pointing 1.5s ease-in-out infinite;
 }
