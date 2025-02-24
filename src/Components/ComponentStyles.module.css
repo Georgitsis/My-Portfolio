@@ -1,6 +1,6 @@
 .BannerName {
   position: relative;
-  top: calc(-1 * clamp(1px, 5.65vw, 70px));
+  top: calc(-1 * clamp(1px, 5.65vw, 77px));
   font-size: clamp(1px, 7.5vw, 100px);
   font-weight: 900;
   white-space: nowrap;
@@ -27,7 +27,33 @@
   border-top-left-radius: var(--mantine-radius-xl);
   border-top-right-radius: var(--mantine-radius-xl);
 }
-@keyframes pointing {
+
+.FingerToRight {
+  display: inline-block;
+  font-size: clamp(1px, 4vw, 100px);
+  animation: pointingToRight 1.5s ease-in-out infinite;
+  transition: opacity 0.8s;
+  transition-delay: 0.4s;
+}
+
+.FingerToButtom {
+  display: inline-block;
+  opacity: 0;
+  font-size: clamp(1px, 4vw, 100px);
+  animation: pointingToButtom 1.5s ease-in-out infinite;
+  transition: opacity 0.8s;
+  transition-delay: 0.4s;
+}
+
+.FadeOutTransition {
+  opacity: 0;
+}
+
+.FadeInTransition {
+  opacity: 1;
+}
+
+@keyframes pointingToRight {
   0%,
   100% {
     transform: translateX(0);
@@ -37,8 +63,12 @@
   }
 }
 
-.Finger {
-  display: inline-block;
-  font-size: clamp(1px, 4vw, 100px);
-  animation: pointing 1.5s ease-in-out infinite;
+@keyframes pointingToButtom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }

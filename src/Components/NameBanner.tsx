@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Stack,
   Image,
@@ -10,7 +10,7 @@ import {
   Transition,
 } from "@mantine/core";
 import classes from "./ComponentStyles.module.css";
-import { LiaHandPointRightSolid } from "react-icons/lia";
+import { LiaHandPointRightSolid, LiaHandPointDownSolid } from "react-icons/lia";
 
 interface BannerComponentProps {
   startInitialTransitions: boolean;
@@ -21,6 +21,13 @@ export default function BannerComponent({
   setStartInitialTransitions,
 }: BannerComponentProps) {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+  const [showFirstPointer, setShowFirstPointer] = useState<boolean>(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowFirstPointer(false);
+    }, 3000);
+  }, []);
 
   return (
     <Stack align="center" justify="flex-start" maw={1280} mx={"auto"} gap="0px">
@@ -70,7 +77,11 @@ export default function BannerComponent({
                   Full Stack Developer
                 </Text>
                 <Group>
-                  <LiaHandPointRightSolid className={`${classes.Finger}`} />
+                  <LiaHandPointRightSolid
+                    className={`${classes.FingerToRight} ${
+                      showFirstPointer ? "" : classes.FadeOutTransition
+                    }`}
+                  />
                   <Anchor
                     className={`${classes.BannerSubText}`}
                     href="mailto:georgitsis.theodoros@gmail.com"
@@ -91,6 +102,11 @@ export default function BannerComponent({
           </Transition>
         </>
       )}
+      <LiaHandPointDownSolid
+        className={`${classes.FingerToButtom} ${
+          !showFirstPointer ? classes.FadeInTransition : ""
+        }`}
+      />
     </Stack>
   );
 }
