@@ -110,3 +110,33 @@ export default function BannerComponent({
     </Stack>
   );
 }
+
+/*import { useRef } from 'react';
+import { Button, Text, Group } from '@mantine/core';
+
+function Demo() {
+  const elementRef = useRef(null);
+
+  const getElementPosition = () => {
+    if (elementRef.current) {
+      const rect = elementRef.current.getBoundingClientRect();
+      console.log('Y Position:', rect.top); // Y position relative to the viewport
+    }
+  };
+
+  return (
+    <Group justify="center">
+      <Text>
+        Scroll position will be printed when button is clicked.
+      </Text>
+      <Button onClick={getElementPosition}>Get Element Y Position</Button>
+      <div ref={elementRef} style={{ marginTop: '500px' }}>
+        <Text>This is the element to check the Y position.</Text>
+      </div>
+    </Group>
+  );
+}
+  
+  https://mantine.dev/hooks/use-window-scroll/
+  
+  */
