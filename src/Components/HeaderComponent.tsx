@@ -1,9 +1,9 @@
-import { Group, Stack, Anchor } from "@mantine/core";
+import { Group, Stack, Anchor, Transition } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import classes from "./ComponentStyles.module.css";
 //import classes from "./ComponentStyles.module.css";
-//import { useHover } from "@mantine/hooks";
+import { useHover } from "@mantine/hooks";
 
 interface HeaderComponentProps {
   startInitialTransitions: boolean;
@@ -11,6 +11,8 @@ interface HeaderComponentProps {
 export default function HeaderComponent({
   startInitialTransitions,
 }: HeaderComponentProps) {
+  const { hovered, ref } = useHover();
+  // const [];
   return (
     <Group
       className={`${classes.NavBarElement} ${
@@ -23,8 +25,22 @@ export default function HeaderComponent({
       px="md"
       pb="md">
       <Stack align="center" justify="flex-end" h={"100%"} p="sm">
-        <Group>
+        <Group ref={ref} style={{ cursor: "pointer" }}>
           <FaRegUser size="32" />
+          <Transition
+            mounted={hovered}
+            transition="fade-right"
+            duration={400}
+            timingFunction="ease">
+            {(styles) => (
+              <Anchor
+                underline="never"
+                style={{ ...styles, color: "inherit" }}
+                size="xl">
+                Projects
+              </Anchor>
+            )}
+          </Transition>
         </Group>
       </Stack>
       <Stack
