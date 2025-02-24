@@ -41,3 +41,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.ProfileFotoContainer {
+  background: var(--mantine-color-dark-6);
+  border-top-left-radius: var(--mantine-radius-xl);
+  border-top-right-radius: var(--mantine-radius-xl);
+}

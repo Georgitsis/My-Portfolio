@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Stack, Image, Text } from "@mantine/core";
+import { Stack, Image, Text, Box, Center } from "@mantine/core";
 import classes from "./ComponentStyles.module.css";
 
 interface BannerComponentProps {
@@ -11,22 +11,24 @@ export default function BannerComponent({
   setStartInitialTransitions,
 }: BannerComponentProps) {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  /*   useEffect(() => {
-    console.log("useEffect");
-    setTransitionClass(true);
-  }, []); */
 
   return (
     <Stack align="center" justify="flex-start" maw={1280} mx={"auto"} gap="0px">
-      <Image
-        src="/Portrait.png"
-        w={"40%"}
-        onLoad={() => {
-          setImageLoaded(true);
-          setTimeout(() => {
-            setStartInitialTransitions(true);
-          }, 200);
-        }}></Image>
+      <Box className={classes.ProfileFotoContainer}>
+        <Center>
+          {" "}
+          <Image
+            src="/Portrait.png"
+            w={"40%"}
+            onLoad={() => {
+              setImageLoaded(true);
+              setTimeout(() => {
+                setStartInitialTransitions(true);
+              }, 200);
+            }}></Image>
+        </Center>
+      </Box>
+
       {imageLoaded && (
         <>
           <Text
