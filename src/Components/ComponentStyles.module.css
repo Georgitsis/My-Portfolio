@@ -1,7 +1,8 @@
 .BannerName {
   position: relative;
-  top: calc(-1 * clamp(1px, 5.65vw, 77px));
+  top: calc(-1 * clamp(1px, 3.75vw, 50px));
   font-size: clamp(1px, 7.5vw, 100px);
+  line-height: clamp(1px, 7.5vw, 100px);
   font-weight: 900;
   white-space: nowrap;
   background: linear-gradient(to bottom, white 50%, #aacdfc 50%);
@@ -18,7 +19,7 @@
 }
 
 .BannerSubText {
-  font-size: clamp(1px, 4vw, 100px);
+  font-size: clamp(1px, 4vw, 50px);
   white-space: nowrap;
 }
 
@@ -38,8 +39,10 @@
 
 .FingerToButtom {
   display: inline-block;
+  position: absolute;
+  top: 85vh;
   opacity: 0;
-  font-size: clamp(1px, 4vw, 100px);
+  font-size: clamp(32px, 4vw, 100px);
   animation: pointingToButtom 1.5s ease-in-out infinite;
   transition: opacity 0.8s;
   transition-delay: 0.4s;

@@ -66,7 +66,7 @@ export default function BannerComponent({
                 style={{
                   ...styles,
                   position: "relative",
-                  top: "calc(-1 * clamp(1px, 5.65vw, 70px))",
+                  top: "calc(-1 * clamp(1px, 3.75vw, 50px))",
                 }}>
                 <Text
                   className={`${classes.BannerSubText} ${
