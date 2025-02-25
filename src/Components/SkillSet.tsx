@@ -1,4 +1,4 @@
-import { Stack, Group, Image, Text } from "@mantine/core";
+import { Stack, Group, Text } from "@mantine/core";
 import Reactts from "./Symbols/ReactSymbol";
 
 export default function SkillSet() {
