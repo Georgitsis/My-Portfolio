@@ -40,7 +40,7 @@
 .FingerToButtom {
   display: inline-block;
   position: absolute;
-  top: 85vh;
+  top: 90vh;
   opacity: 0;
   font-size: clamp(32px, 4vw, 100px);
   animation: pointingToButtom 1.5s ease-in-out infinite;

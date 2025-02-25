@@ -1,0 +1,8 @@
+.IntroductionContainer {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.FadeInTransition {
+  opacity: 1;
+}

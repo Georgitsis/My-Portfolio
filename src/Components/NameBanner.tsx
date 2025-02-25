@@ -9,6 +9,7 @@ import {
   Anchor,
   Transition,
 } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
 import classes from "./ComponentStyles.module.css";
 import { LiaHandPointRightSolid, LiaHandPointDownSolid } from "react-icons/lia";
 
@@ -22,6 +23,7 @@ export default function BannerComponent({
 }: BannerComponentProps) {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [showFirstPointer, setShowFirstPointer] = useState<boolean>(true);
+  const [scroll, scrollTo] = useWindowScroll();
 
   useEffect(() => {
     setTimeout(() => {
@@ -104,39 +106,9 @@ export default function BannerComponent({
       )}
       <LiaHandPointDownSolid
         className={`${classes.FingerToButtom} ${
-          !showFirstPointer ? classes.FadeInTransition : ""
+          !showFirstPointer && scroll.y === 0 ? classes.FadeInTransition : ""
         }`}
       />
     </Stack>
   );
 }
-
-/*import { useRef } from 'react';
-import { Button, Text, Group } from '@mantine/core';
-
-function Demo() {
-  const elementRef = useRef(null);
-
-  const getElementPosition = () => {
-    if (elementRef.current) {
-      const rect = elementRef.current.getBoundingClientRect();
-      console.log('Y Position:', rect.top); // Y position relative to the viewport
-    }
-  };
-
-  return (
-    <Group justify="center">
-      <Text>
-        Scroll position will be printed when button is clicked.
-      </Text>
-      <Button onClick={getElementPosition}>Get Element Y Position</Button>
-      <div ref={elementRef} style={{ marginTop: '500px' }}>
-        <Text>This is the element to check the Y position.</Text>
-      </div>
-    </Group>
-  );
-}
-  
-  https://mantine.dev/hooks/use-window-scroll/
-  
-  */
