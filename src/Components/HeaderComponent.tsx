@@ -75,22 +75,3 @@ export default function HeaderComponent({
     </Transition>
   );
 }
-/* 
-function TakeContact(startInitialTransitions: boolean) {
-  return (
-    <Stack align="center" justify="flex-end" h={"100%"} p="md">
-      <FaRegMessage size="32" />
-    </Stack>
-  );
-}
-
-function ProjectsNavBarComponet() {
-  const { hovered, ref } = useHover();
-  return (
-    <Stack align="center" justify="flex-end" h={"100%"} p="sm" ref={ref}>
-      <Group>
-        <FaRegUser size="32" />
-      </Group>
-    </Stack>
-  );
-} */
