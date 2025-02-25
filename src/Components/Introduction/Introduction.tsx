@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Group, Text } from "@mantine/core";
+import { Group, Text, Transition } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import classes from "./Introduction.module.css";
 
@@ -7,6 +7,20 @@ export default function Introduction() {
   const { height, width } = useViewportSize();
   const componentRef = useRef<HTMLDivElement | null>(null);
   const [fadeIn, setFadeIn] = useState<boolean>(false);
+  const [fadeInSecondText, setFadeInSecondText] = useState<boolean>(false);
+  const entireFirstTextToDisplayRef = useRef<string[]>([
+    "Hi, ",
+    "I'm ",
+    "Theo ",
+    "a ",
+    "full-",
+    "stack ",
+    "developer ",
+    "based ",
+    "in ",
+    "Norway.",
+  ]);
+  const [animatedSpans, setAnimatedSpans] = useState<string[]>([]);
 
   useEffect(() => {
     if (componentRef.current) {
@@ -14,6 +28,21 @@ export default function Introduction() {
       if (rect.y / height < 0.75) setFadeIn(true);
     }
   });
+
+  useEffect(() => {
+    if (fadeIn) {
+      setTimeout(() => {
+        if (entireFirstTextToDisplayRef.current.length > 0) {
+          const stringToAdd = entireFirstTextToDisplayRef.current.shift()!;
+          setAnimatedSpans([...animatedSpans, stringToAdd]);
+          if (animatedSpans.length === 9) {
+            setFadeInSecondText(true);
+          }
+        }
+      }, 250);
+    }
+  }, [fadeIn, animatedSpans]);
+
   return (
     <Group
       ref={componentRef}
@@ -32,12 +61,22 @@ export default function Introduction() {
         borderRadius: "var(--mantine-radius-xl)",
       }}>
       <Text style={{ alignSelf: "flex-start", fontSize: "3em" }}>
-        Hi, I'm Theo, a full-stack developer based in Norway.
+        {animatedSpans.map((spanText, index) => (
+          <span
+            key={index}
+            className={`${
+              index === animatedSpans.length - 1 ? classes.fadeIn : ""
+            }`}>
+            {spanText}
+          </span>
+        ))}
       </Text>
-      <Text style={{ alignSelf: "flex-start", fontSize: "1.75em" }}>
-        Although new in the field of digital development, I'm eager to
-        contribute my skills and help create impactful digital experiences that
-        engage and inspire users.
+      <Text
+        className={fadeInSecondText ? classes.fadeInSlow : ""}
+        style={{ alignSelf: "flex-start", fontSize: "1.75em", opacity: "0" }}>
+        I'm driven by my newly discovered passion for digital development and
+        eager to contribute my skills in creating impactful digital experiences
+        that engage and inspire users.
       </Text>
     </Group>
   );
