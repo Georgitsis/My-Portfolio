@@ -16,7 +16,7 @@
   }
 }
 .fadeIn {
-  animation: fadeInTranslate 0.25s linear forwards;
+  animation: fadeInTranslate 0.15s linear forwards;
 }
 
 .fadeInSlow {

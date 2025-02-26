@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Group, Text, Transition } from "@mantine/core";
+import { Group, Text } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import classes from "./Introduction.module.css";
 
@@ -39,7 +39,7 @@ export default function Introduction() {
             setFadeInSecondText(true);
           }
         }
-      }, 250);
+      }, 150);
     }
   }, [fadeIn, animatedSpans]);
 
