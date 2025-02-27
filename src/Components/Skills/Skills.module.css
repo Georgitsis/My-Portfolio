@@ -1,0 +1,37 @@
+.SkillsContainer {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.SkillsContainerText {
+  opacity: 0;
+  transition: opacity 0.4s;
+  transition-delay: 0.8s;
+}
+
+.FadeInTransition {
+  opacity: 1;
+}
+
+.imageInvisible {
+  opacity: 0;
+}
+
+.imageAnimation {
+  animation: magnify-shrink-fade-in 0.4s ease-in-out;
+}
+
+@keyframes magnify-shrink-fade-in {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

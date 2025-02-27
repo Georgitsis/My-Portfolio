@@ -1,10 +1,11 @@
 import { useRef, useEffect, useState } from "react";
 import { Group, Text } from "@mantine/core";
-import { useViewportSize } from "@mantine/hooks";
+import { useViewportSize, useWindowScroll } from "@mantine/hooks";
 import classes from "./Introduction.module.css";
 
 export default function Introduction() {
   const { height, width } = useViewportSize();
+  const [scroll] = useWindowScroll();
   const componentRef = useRef<HTMLDivElement | null>(null);
   const [fadeIn, setFadeIn] = useState<boolean>(false);
   const [fadeInSecondText, setFadeInSecondText] = useState<boolean>(false);
@@ -25,7 +26,7 @@ export default function Introduction() {
   useEffect(() => {
     if (componentRef.current) {
       const rect = componentRef.current.getBoundingClientRect();
-      if (rect.y / height < 0.75) setFadeIn(true);
+      if (rect.y / height < 0.65 && scroll.y > 0) setFadeIn(true);
     }
   });
 

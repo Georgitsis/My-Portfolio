@@ -23,7 +23,7 @@ export default function BannerComponent({
 }: BannerComponentProps) {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [showFirstPointer, setShowFirstPointer] = useState<boolean>(true);
-  const [scroll, scrollTo] = useWindowScroll();
+  const [scroll /*,  scrollTo */] = useWindowScroll();
 
   useEffect(() => {
     setTimeout(() => {
