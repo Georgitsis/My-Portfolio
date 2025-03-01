@@ -1,4 +1,4 @@
-import { Group, Image, Text, Stack, Tooltip } from "@mantine/core";
+import { Group, Image, Text, Stack, Tooltip, Space } from "@mantine/core";
 import { useRef, useEffect, useState } from "react";
 import { useViewportSize, useWindowScroll } from "@mantine/hooks";
 import classes from "./Skills.module.css";
@@ -43,9 +43,9 @@ export default function Skills() {
         }, 400);
 
         return () => clearInterval(interval);
-      }, 1200); // 1.2 seconds delay before starting the interval
+      }, 1200);
 
-      return () => clearTimeout(delayTimeout); // Clear the timeout if the component is unmounted or fadeIn changes
+      return () => clearTimeout(delayTimeout);
     }
   }, [fadeIn]);
 
@@ -64,15 +64,15 @@ export default function Skills() {
       style={{
         background: "var(--mantine-color-dark-6)",
         borderRadius: "var(--mantine-radius-xl)",
-        //marginTop: "40vh",
       }}>
       <Text
         className={`${classes.SkillsContainerText} ${
           fadeIn ? classes.FadeInTransition : ""
         }`}
         style={{ alignSelf: "center", fontSize: "2em" }}>
-        As of now, I have hands-on experience with
+        Full-Stack Mastery: A Balance of Depth & Breadth
       </Text>
+      <Space h="md" />
       <Group grow wrap={"nowrap"} justify="center" gap="lg">
         {techStack.map((tech, index) => (
           <Tooltip key={tech.label} label={tech.label}>
@@ -90,6 +90,16 @@ export default function Skills() {
           </Tooltip>
         ))}
       </Group>
+      <Space h="md" />
+      <Text
+        className={`${classes.SkillsContainerText} ${
+          fadeIn ? classes.FadeInTransition : ""
+        }`}
+        fs="italic"
+        style={{ alignSelf: "center", fontSize: "2em" }}>
+        "A jack of all trades is a master of none, but oftentimes better than
+        master of one."
+      </Text>
     </Stack>
   );
 }
