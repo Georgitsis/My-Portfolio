@@ -1,3 +1,17 @@
+.firstSkillsText {
+  font-size: 2.5em;
+  @media (max-width: 36em) {
+    font-size: 1.75em;
+  }
+}
+
+.secondSkillsText {
+  font-size: 2em;
+  @media (max-width: 36em) {
+    font-size: 1.25em;
+  }
+}
+
 .SkillsContainer {
   opacity: 0;
   transition: opacity 0.4s;

@@ -61,7 +61,9 @@ export default function Introduction() {
         background: "var(--mantine-color-dark-6)",
         borderRadius: "var(--mantine-radius-xl)",
       }}>
-      <Text style={{ alignSelf: "flex-start", fontSize: "3em" }}>
+      <Text
+        className={classes.firstIntroText}
+        style={{ alignSelf: "flex-start" }}>
         {animatedSpans.map((spanText, index) => (
           <span
             key={index}
@@ -73,11 +75,17 @@ export default function Introduction() {
         ))}
       </Text>
       <Text
-        className={fadeInSecondText ? classes.fadeInSlow : ""}
-        style={{ alignSelf: "flex-start", fontSize: "1.75em", opacity: "0" }}>
-        I'm driven by my newly discovered passion for digital development and
-        eager to contribute my skills in creating impactful digital experiences
-        that engage and inspire users.
+        className={`${fadeInSecondText ? classes.fadeInSlow : ""} ${
+          classes.secondIntroText
+        }`}
+        style={{
+          textAlign: "justify",
+          alignSelf: "flex-start",
+          opacity: "0",
+        }}>
+        I'm eager to apply my skills in web development to create meaningful and
+        engaging digital experiences that captivate users, enhance usability,
+        and drive innovation.
       </Text>
     </Group>
   );

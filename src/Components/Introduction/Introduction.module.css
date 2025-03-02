@@ -1,3 +1,17 @@
+.firstIntroText {
+  font-size: 3em;
+  @media (max-width: 48em) {
+    font-size: 2em;
+  }
+}
+
+.secondIntroText {
+  font-size: 1.75em;
+  @media (max-width: 48em) {
+    font-size: 1.25em;
+  }
+}
+
 .IntroductionContainer {
   opacity: 0;
   transition: opacity 0.4s;

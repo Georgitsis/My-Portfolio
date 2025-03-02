@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   Stack,
   Image,
@@ -10,7 +10,7 @@ import {
   Transition,
 } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
-import classes from "./ComponentStyles.module.css";
+import classes from "./NameBanner.module.css";
 import { LiaHandPointRightSolid, LiaHandPointDownSolid } from "react-icons/lia";
 
 interface BannerComponentProps {
@@ -23,19 +23,25 @@ export default function BannerComponent({
 }: BannerComponentProps) {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [showFirstPointer, setShowFirstPointer] = useState<boolean>(true);
-  const [scroll /*,  scrollTo */] = useWindowScroll();
+  const [scroll] = useWindowScroll();
+
+  const anchorRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
     setTimeout(() => {
       setShowFirstPointer(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
     <Stack align="center" justify="flex-start" maw={1280} mx={"auto"} gap="0px">
-      <Box className={classes.ProfileFotoContainer}>
+      <Box
+        style={{
+          background: "var(--mantine-color-dark-6)",
+          borderTopLeftRadius: "var(--mantine-radius-xl)",
+          borderTopRightRadius: "var(--mantine-radius-xl)",
+        }}>
         <Center>
-          {" "}
           <Image
             src="/Portrait.png"
             w={"40%"}
@@ -70,12 +76,7 @@ export default function BannerComponent({
                   position: "relative",
                   top: "calc(-1 * clamp(1px, 3.75vw, 50px))",
                 }}>
-                <Text
-                  className={`${classes.BannerSubText} ${
-                    startInitialTransitions
-                      ? classes.BannerSubTextTransitioned
-                      : ""
-                  }`}>
+                <Text className={`${classes.BannerSubText}`}>
                   Full Stack Developer
                 </Text>
                 <Group>
@@ -85,14 +86,15 @@ export default function BannerComponent({
                     }`}
                   />
                   <Anchor
+                    ref={anchorRef}
                     className={`${classes.BannerSubText}`}
                     href="mailto:georgitsis.theodoros@gmail.com"
                     underline="never"
-                    px={"xs"}
+                    px={"xl"}
                     style={{
+                      borderRadius: "1000px",
                       color: "inherit",
                       border: "solid 1px white",
-                      borderRadius: "var(--mantine-radius-xl)",
                       display: "inline-flex",
                       alignItems: "center",
                     }}>

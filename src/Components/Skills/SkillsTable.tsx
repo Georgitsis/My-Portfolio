@@ -8,11 +8,14 @@ export default function Skills() {
   const componentRef = useRef<HTMLDivElement | null>(null);
   const [fadeIn, setFadeIn] = useState<boolean>(false);
 
-  const techStack = [
+  const techStack1 = [
+    { label: "Git Version Control", src: "/git.svg" },
     { label: "JavaScript", src: "/js.svg" },
     { label: "TypeScript", src: "/ts.svg" },
     { label: "React", src: "/react.svg" },
     { label: "Angular", src: "/angular.svg" },
+  ];
+  const techStack2 = [
     { label: "Node.js", src: "/nodejs.svg" },
     { label: "C++", src: "/C++.svg" },
     { label: "AWS", src: "/aws.svg" },
@@ -31,12 +34,13 @@ export default function Skills() {
 
   useEffect(() => {
     if (fadeIn) {
+      const counterLength = techStack1.length + techStack2.length;
       const delayTimeout = setTimeout(() => {
         const interval = setInterval(() => {
           setIndexCounter((prev) => {
-            if (prev + 1 >= techStack.length) {
+            if (prev + 1 >= counterLength) {
               clearInterval(interval);
-              return techStack.length;
+              return counterLength;
             }
             return prev + 1;
           });
@@ -68,13 +72,16 @@ export default function Skills() {
       <Text
         className={`${classes.SkillsContainerText} ${
           fadeIn ? classes.FadeInTransition : ""
-        }`}
-        style={{ alignSelf: "center", fontSize: "2em" }}>
+        } ${classes.firstSkillsText}`}
+        style={{
+          textAlign: "center",
+          alignSelf: "center",
+        }}>
         Full-Stack Mastery: A Balance of Depth & Breadth
       </Text>
       <Space h="md" />
-      <Group grow wrap={"nowrap"} justify="center" gap="lg">
-        {techStack.map((tech, index) => (
+      <Group grow justify="center" gap="lg">
+        {techStack1.map((tech, index) => (
           <Tooltip key={tech.label} label={tech.label}>
             <Image
               radius="md"
@@ -89,14 +96,31 @@ export default function Skills() {
             />
           </Tooltip>
         ))}
+      </Group>{" "}
+      <Group grow justify="center" gap="lg">
+        {techStack2.map((tech, index) => (
+          <Tooltip key={tech.label} label={tech.label}>
+            <Image
+              radius="md"
+              src={tech.src}
+              className={
+                index + 5 < indexCounter
+                  ? ""
+                  : index + 5 === indexCounter
+                  ? classes.imageAnimation
+                  : classes.imageInvisible
+              }
+            />
+          </Tooltip>
+        ))}
       </Group>
       <Space h="md" />
       <Text
         className={`${classes.SkillsContainerText} ${
           fadeIn ? classes.FadeInTransition : ""
-        }`}
+        } ${classes.secondSkillsText}`}
         fs="italic"
-        style={{ alignSelf: "center", fontSize: "2em" }}>
+        style={{ textAlign: "justify", alignSelf: "center" }}>
         "A jack of all trades is a master of none, but oftentimes better than
         master of one."
       </Text>

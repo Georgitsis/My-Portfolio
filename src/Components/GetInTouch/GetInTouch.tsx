@@ -1,45 +1,61 @@
-import { Box, Text, Stack, Group } from "@mantine/core";
+import { Box, Text, Stack, Anchor } from "@mantine/core";
 import { useRef, useEffect, useState } from "react";
 export default function GetInTouch() {
-  const componentRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef<HTMLDivElement | null>(null);
+  const anchorRef = useRef<HTMLAnchorElement | null>(null);
+
   const [textOfset, setTextOfset] = useState<number>(0);
+
   useEffect(() => {
-    if (componentRef.current) {
-      const rect = componentRef.current.getBoundingClientRect();
+    if (textRef.current) {
+      const rect = textRef.current.getBoundingClientRect();
       setTextOfset(rect.height / 2);
-      console.log(textOfset);
     }
   });
   return (
     <Stack maw={1280} mx={"auto"} w="100%" gap={0}>
-      <Group
+      <Box
         style={{
           height: "25vh",
           background: "var(--mantine-color-dark-6)",
           borderBottomLeftRadius: "var(--mantine-radius-xl)",
           borderBottomRightRadius: "var(--mantine-radius-xl)",
-        }}></Group>
-      <Box
+        }}></Box>
+      <Text
+        ref={textRef}
         style={{
-          background: "#aacdfc",
+          textAlign: "center",
+          fontWeight: "800",
+          fontSize: "clamp(1px, 12.5vw, 150px)",
+          position: "relative",
+          bottom: `${textOfset}px`,
+          background: "linear-gradient(to bottom, white 50%, #aacdfc 50%)",
+          WebkitBackgroundClip: "text",
           backgroundClip: "text",
           color: "transparent",
-          overflow: "visible",
         }}>
-        <Text
-          ref={componentRef}
-          style={{
-            textAlign: "center",
-            fontWeight: "800",
-            fontSize: "clamp(1px, 7.5vw, 100px)",
-            zIndex: 10,
-            position: "relative",
-            bottom: `${textOfset}px`,
-            border: "1px solid black",
-          }}>
-          GET IN TOUCH
-        </Text>
-      </Box>
+        GET IN TOUCH
+      </Text>{" "}
+      <Anchor
+        ref={anchorRef}
+        href="mailto:georgitsis.theodoros@gmail.com"
+        underline="never"
+        px={"xl"}
+        style={{
+          width: "fit-content",
+          color: "inherit",
+          border: "solid 1px white",
+          borderRadius: "1000px",
+          display: "inline-flex",
+          alignItems: "center",
+          fontSize: "clamp(1px, 4vw, 50px)",
+          whiteSpace: "nowrap",
+          alignSelf: "center",
+          position: "relative",
+          bottom: `${textOfset}px`,
+        }}>
+        georgitsis.theodoros@gmail.com
+      </Anchor>
     </Stack>
   );
 }

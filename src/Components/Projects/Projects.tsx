@@ -1,13 +1,24 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Box, Card, Group, Text, Image, Anchor } from "@mantine/core";
-import classes from "./Projects.module.css";
 import { useState, useRef, useEffect } from "react";
 
 export default function Projects() {
   const projects = [
-    { title: "test1", imageSource: "/js.svg" },
-    { title: "test2", imageSource: "/aws.svg" },
-    { title: "test3", imageSource: "/aws.svg" },
+    {
+      title: "test1",
+      imageSource:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+    },
+    {
+      title: "test2",
+      imageSource:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+    },
+    {
+      title: "test3",
+      imageSource:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+    },
   ];
 
   const projectsHeaderRef = useRef<HTMLDivElement>(null);
@@ -30,7 +41,7 @@ export default function Projects() {
           fontWeight: "800",
           textAlign: "center",
           position: "sticky",
-          top: "15vh",
+          top: "10vh",
         }}>
         PROJECTS
       </Text>
@@ -63,7 +74,7 @@ function ProjectCard({
       underline="never"
       style={{
         position: "sticky",
-        top: `calc(15vh + ${projectHeaderHeight}px)`,
+        top: `calc(10vh + ${projectHeaderHeight}px)`,
       }}
       //className={classes.fixedProjectsTitle}
     >
@@ -77,7 +88,7 @@ function ProjectCard({
           </Group>
         </Card.Section>
         <Card.Section>
-          <Image src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png" />
+          <Image src={imageScr} />
         </Card.Section>
       </Card>
     </Anchor>
