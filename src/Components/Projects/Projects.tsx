@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 export default function Projects() {
   const projects = [
     {
-      title: "test1",
+      title: "smartlittleboxes.com",
       imageSource:
         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
     },
