@@ -37,11 +37,16 @@ export default function Projects() {
         size={"10vw"}
         mx={"auto"}
         ref={projectsHeaderRef}
+        mb={"xl"}
         style={{
           fontWeight: "800",
           textAlign: "center",
           position: "sticky",
-          top: "10vh",
+          top: "5vh",
+          background: "linear-gradient(to bottom, white 50%, #aacdfc 50%)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
         }}>
         PROJECTS
       </Text>
@@ -75,9 +80,7 @@ function ProjectCard({
       style={{
         position: "sticky",
         top: `calc(10vh + ${projectHeaderHeight}px)`,
-      }}
-      //className={classes.fixedProjectsTitle}
-    >
+      }}>
       <Card withBorder radius="xl">
         <Card.Section withBorder inheritPadding py="lg">
           <Group justify="space-between">

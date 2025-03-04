@@ -1,5 +1,5 @@
 .firstSkillsText {
-  font-size: 2.5em;
+  font-size: 3em;
   @media (max-width: 36em) {
     font-size: 1.75em;
   }
