@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Group, Text } from "@mantine/core";
+import { Group, Text, Stack } from "@mantine/core";
 import { useViewportSize, useWindowScroll } from "@mantine/hooks";
 import classes from "./Introduction.module.css";
 
@@ -45,25 +45,22 @@ export default function Introduction() {
   }, [fadeIn, animatedSpans]);
 
   return (
-    <Group
+    <Stack
       ref={componentRef}
       className={`${classes.IntroductionContainer} ${
         fadeIn ? classes.FadeInTransition : ""
       }`}
-      align="center"
+      align="stretch"
       justify="flex-start"
       maw={1280}
       mx={"auto"}
       gap={60}
       p={"xl"}
-      grow={width > 992 ? true : false}
       style={{
         background: "var(--mantine-color-dark-6)",
         borderRadius: "var(--mantine-radius-xl)",
       }}>
-      <Text
-        className={classes.firstIntroText}
-        style={{ alignSelf: "flex-start" }}>
+      <Text className={classes.firstIntroText} style={{ textAlign: "center" }}>
         {animatedSpans.map((spanText, index) => (
           <span
             key={index}
@@ -87,6 +84,6 @@ export default function Introduction() {
         engaging digital experiences that captivate users, enhance usability,
         and drive innovation.
       </Text>
-    </Group>
+    </Stack>
   );
 }
