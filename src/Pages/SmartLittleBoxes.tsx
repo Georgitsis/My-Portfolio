@@ -11,8 +11,8 @@ import {
   Tooltip,
   List,
 } from "@mantine/core";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import classes from "./projects.module.css";
+import React from "react";
 
 export default function SmartLittleBoxes() {
   const techStack = [
@@ -93,16 +93,20 @@ export default function SmartLittleBoxes() {
                 }}>
                 smartlittleboxes.com
               </Text>
-              <FaExternalLinkAlt size={32} style={{ alignSelf: "flex-end" }} />
             </Group>
           </BackgroundImage>
           <Stack
+            mt={"20vh"}
             p={"xl"}
             style={{
               background: "var(--mantine-color-dark-6)",
               borderRadius: "var(--mantine-radius-xl)",
             }}
             className={classes.projectFont}>
+            {" "}
+            <Title size={"5vw"} style={{ textAlign: "center" }}>
+              About the Project
+            </Title>
             <Text style={{ textAlign: "justify", fontSize: "inherit" }}>
               Smartlittleboxes is a user-friendly inventory management tool
               designed to keep your belongings organized. Unable to find a
@@ -110,6 +114,19 @@ export default function SmartLittleBoxes() {
               project has evolved into a collaborative effort on Git,
               demonstrating my ability to work with others.
             </Text>
+          </Stack>{" "}
+          <Stack
+            p={"xl"}
+            mt={"20vh"}
+            style={{
+              background: "var(--mantine-color-dark-6)",
+              borderRadius: "var(--mantine-radius-xl)",
+            }}
+            className={classes.projectFont}>
+            {" "}
+            <Title size={"5vw"} style={{ textAlign: "center" }}>
+              Visit
+            </Title>
             <Text mt="xl" style={{ textAlign: "justify", fontSize: "inherit" }}>
               Feel free to visit the{" "}
               <Anchor
@@ -120,9 +137,12 @@ export default function SmartLittleBoxes() {
                 style={{ color: "inherit", fontSize: "inherit" }}>
                 smartlittleboxes.com
               </Anchor>
-              , but please note that it's still in development, and registration
-              isn't available yet. To explore, use the credentials: username:
-              user1 and password: 123456
+              , BUT(!) please note that it's still in development, and
+              registration isn't available yet.
+              <br /> To explore, use the following credentials: <br />
+              <span style={{ marginLeft: "10%" }}>username: user1</span>
+              <br />
+              <span style={{ marginLeft: "10%" }}>password: 123456</span>
             </Text>
           </Stack>
           <Stack
@@ -140,15 +160,15 @@ export default function SmartLittleBoxes() {
               align="center"
               gutter={{ base: "xl", xs: "xl", md: "xl", xl: 50 }}
               style={{ textAlign: "justify" }}>
-              {techStack.map((tech) => (
-                <>
+              {techStack.map((tech, index) => (
+                <React.Fragment key={`tech-${index}`}>
                   <Grid.Col span={2}>
                     <Tooltip label={tech.label}>
                       <Image radius="md" src={tech.src} />
                     </Tooltip>
                   </Grid.Col>
                   <Grid.Col span={10}>{tech.text}</Grid.Col>
-                </>
+                </React.Fragment>
               ))}
             </Grid>
           </Stack>
@@ -163,14 +183,12 @@ export default function SmartLittleBoxes() {
               What's Next?
             </Title>
             <List className={classes.projectFont}>
-              <List.Item>
-                Switching from DynamoDB for saving item data to NeptuneDB (graph
-                data base)
+              <List.Item key="To-Do-1">
+                Switching from DynamoDB for saving item data to NeptuneDB
               </List.Item>
-              <List.Item>File and image upload</List.Item>
-              <List.Item>Item categories</List.Item>
-              <List.Item>AI powered item search</List.Item>
-              <List.Item>AI powered item search</List.Item>
+              <List.Item key="To-Do-2">File and image upload</List.Item>
+              <List.Item key="To-Do-3">Item categories</List.Item>
+              <List.Item key="To-Do-4">AI powered item search</List.Item>
             </List>
           </Stack>
         </Stack>
