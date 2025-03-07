@@ -3,10 +3,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@mantine/core/styles.css";
 import "./main.css";
 import MainPage from "./Pages/MainPage";
+import SmartLittleBoxes from "./Pages/SmartLittleBoxes";
 
 import { MantineProvider, createTheme } from "@mantine/core";
 
-const router = createBrowserRouter([{ path: "/", element: <MainPage /> }]);
+const router = createBrowserRouter([
+  { path: "/", element: <MainPage /> },
+  { path: "/smartlittleboxes", element: <SmartLittleBoxes /> },
+]);
 
 const theme = createTheme({ white: "fff" });
 

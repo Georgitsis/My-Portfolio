@@ -44,6 +44,7 @@ export default function BannerComponent({
         <Center>
           <Image
             src="/Portrait.png"
+            mt="xl"
             w={"40%"}
             onLoad={() => {
               setImageLoaded(true);

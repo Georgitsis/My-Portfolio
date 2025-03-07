@@ -1,0 +1,40 @@
+.projectFont {
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--mantine-color-white);
+}
+
+/* xs breakpoint - 576px */
+@media (min-width: 36em) {
+  .projectFont {
+    font-size: 20px;
+  }
+}
+
+/* sm breakpoint - 768px */
+@media (min-width: 48em) {
+  .projectFont {
+    font-size: 24px;
+  }
+}
+
+/* md breakpoint - 992px */
+@media (min-width: 62em) {
+  .projectFont {
+    font-size: 28px;
+  }
+}
+
+/* lg breakpoint - 1200px */
+@media (min-width: 75em) {
+  .projectFont {
+    font-size: 32px;
+  }
+}
+
+/* xl breakpoint - 1280px */
+@media (min-width: 80em) {
+  .projectFont {
+    font-size: 36px;
+  }
+}
