@@ -13,6 +13,13 @@ export default function Projects() {
       projectLink: "/smartlittleboxes",
     },
     {
+      title: "MyFlix",
+      imageSource: "/my_flix/my_flix_react_client.png",
+      description:
+        "Meet App helps users stay updated on upcoming CareerFoundry events. It leverages OAuth 2.0 for authentication and the Google API to pull events directly from a connected calendar.",
+      projectLink: "/meet",
+    },
+    {
       title: "Meet",
       imageSource: "/meet/meet_2.png",
       description:
@@ -96,7 +103,6 @@ function ProjectCard({
         position: "sticky",
         top: `calc(2.5vh + ${projectHeaderHeight}px)`,
       }}
-      //href="#"
       onClick={() => {
         navigate(projectLink);
       }}>
@@ -119,8 +125,6 @@ function ProjectCard({
           <Image
             src={imageScr}
             style={{
-              objectFit: "unset",
-              objectPosition: "right bottom",
               width: "100%",
             }}
           />
