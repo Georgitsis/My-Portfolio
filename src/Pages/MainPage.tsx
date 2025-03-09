@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { AppShell, Stack, Space } from "@mantine/core";
-import {
-  useHeadroom /*useWindowScroll, useViewportSize*/,
-} from "@mantine/hooks";
-import HeaderComponent from "../Components/HeaderComponent";
+import { useHeadroom } from "@mantine/hooks";
+import HeaderComponent from "../Components/HeaderComponent/HeaderComponent";
 import BannerComponent from "../Components/NameBanner/NameBanner";
 import Introduction from "../Components/Introduction/Introduction";
 import Skills from "../Components/Skills/SkillsTable";
