@@ -1,4 +1,4 @@
-import { Stack, Text, Title, Anchor, List } from "@mantine/core";
+import { Text, Title } from "@mantine/core";
 import StackContainer from "../Components/StackContainer/StackContainer";
 import TechStack from "../Components/ProjectTechStack/ProjectTechStack";
 import ProjectHeader from "../Components/ProjectHeader/ProjectHeader";

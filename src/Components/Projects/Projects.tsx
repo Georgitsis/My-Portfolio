@@ -20,12 +20,11 @@ export default function Projects() {
       projectLink: "/meet",
     },
     {
-      title: "test3",
-      imageSource:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+      title: "Chat App",
+      imageSource: "/chat/ChatApp.png",
       description:
-        "An easy-to-use inventory management tool to track, organize, and manage your items efficiently.",
-      projectLink: "/meet",
+        "ChatApp is a React Native mobile app built with Gifted Chat, allowing users to log in anonymously and chat in real-time. It supports sending pictures, taking new photos, and sharing locations, with installation via Expo.",
+      projectLink: "/chatapp",
     },
   ];
 
