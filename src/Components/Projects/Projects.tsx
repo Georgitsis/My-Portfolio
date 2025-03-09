@@ -10,13 +10,14 @@ export default function Projects() {
       imageSource: "/slb/slb_3.png",
       description:
         "An easy-to-use inventory management tool to track, organize, and manage your items efficiently.",
+      projectLink: "/smartlittleboxes",
     },
     {
-      title: "test2",
-      imageSource:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+      title: "Meet",
+      imageSource: "/meet/meet_2.png",
       description:
-        "An easy-to-use inventory management tool to track, organize, and manage your items efficiently.",
+        "Meet App helps users stay updated on upcoming CareerFoundry events. It leverages OAuth 2.0 for authentication and the Google API to pull events directly from a connected calendar.",
+      projectLink: "/meet",
     },
     {
       title: "test3",
@@ -24,6 +25,7 @@ export default function Projects() {
         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
       description:
         "An easy-to-use inventory management tool to track, organize, and manage your items efficiently.",
+      projectLink: "/meet",
     },
   ];
 
@@ -62,7 +64,8 @@ export default function Projects() {
           projectTitle={card.title}
           imageScr={card.imageSource}
           description={card.description}
-          projectHeaderHeight={projectHeaderHeight}></ProjectCard>
+          projectHeaderHeight={projectHeaderHeight}
+          projectLink={card.projectLink}></ProjectCard>
       ))}
       <Space h={"xl"} />
     </Stack>
@@ -74,6 +77,7 @@ interface ProjectCardPropsType {
   imageScr: string;
   description: string;
   projectHeaderHeight: number;
+  projectLink: string;
 }
 
 function ProjectCard({
@@ -81,6 +85,7 @@ function ProjectCard({
   imageScr,
   description,
   projectHeaderHeight,
+  projectLink,
 }: ProjectCardPropsType) {
   const componentRef = useRef<HTMLAnchorElement | null>(null);
   const navigate = useNavigate();
@@ -92,9 +97,9 @@ function ProjectCard({
         position: "sticky",
         top: `calc(2.5vh + ${projectHeaderHeight}px)`,
       }}
-      href="#"
+      //href="#"
       onClick={() => {
-        navigate("/smartlittleboxes");
+        navigate(projectLink);
       }}>
       <Card
         withBorder

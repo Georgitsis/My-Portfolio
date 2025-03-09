@@ -4,12 +4,14 @@ import "@mantine/core/styles.css";
 import "./main.css";
 import MainPage from "./Pages/MainPage";
 import SmartLittleBoxes from "./Pages/SmartLittleBoxes";
+import Meet from "./Pages/Meet";
 
 import { MantineProvider, createTheme } from "@mantine/core";
 
 const router = createBrowserRouter([
   { path: "/", element: <MainPage /> },
   { path: "/smartlittleboxes", element: <SmartLittleBoxes /> },
+  { path: "/meet", element: <Meet /> },
 ]);
 
 const theme = createTheme({ white: "fff" });
