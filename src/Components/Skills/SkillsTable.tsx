@@ -1,4 +1,4 @@
-import { Group, Image, Text, Stack, Tooltip, Space } from "@mantine/core";
+import { Image, Text, Stack, Tooltip, Space, SimpleGrid } from "@mantine/core";
 import { useRef, useEffect, useState } from "react";
 import { useViewportSize, useWindowScroll } from "@mantine/hooks";
 import classes from "./Skills.module.css";
@@ -14,6 +14,11 @@ export default function Skills() {
     { label: "TypeScript", src: "/skills_svgs/ts.svg" },
     { label: "React", src: "/skills_svgs/react.svg" },
     { label: "Angular", src: "/skills_svgs/angular.svg" },
+    { label: "Node.js", src: "/skills_svgs/nodejs.svg" },
+    { label: "C++", src: "/skills_svgs/C++.svg" },
+    { label: "AWS", src: "/skills_svgs/aws.svg" },
+    { label: "Docker", src: "/skills_svgs/docker.svg" },
+    { label: "MongoDB", src: "/skills_svgs/mongodb.svg" },
   ];
   const techStack2 = [
     { label: "Node.js", src: "/skills_svgs/nodejs.svg" },
@@ -80,7 +85,11 @@ export default function Skills() {
         Full-Stack Mastery: A Balance of Depth & Breadth
       </Text>
       <Space h="md" />
-      <Group grow justify="center" gap="lg">
+      <SimpleGrid
+        cols={5}
+        spacing={{ base: 10, sm: "xl" }}
+        verticalSpacing={{ base: 10, sm: "xl" }}>
+        {" "}
         {techStack1.map((tech, index) => (
           <Tooltip key={tech.label} label={tech.label}>
             <Image
@@ -96,24 +105,8 @@ export default function Skills() {
             />
           </Tooltip>
         ))}
-      </Group>{" "}
-      <Group grow justify="center" gap="lg">
-        {techStack2.map((tech, index) => (
-          <Tooltip key={tech.label} label={tech.label}>
-            <Image
-              radius="md"
-              src={tech.src}
-              className={
-                index + 5 < indexCounter
-                  ? ""
-                  : index + 5 === indexCounter
-                  ? classes.imageAnimation
-                  : classes.imageInvisible
-              }
-            />
-          </Tooltip>
-        ))}
-      </Group>
+      </SimpleGrid>
+
       <Space h="md" />
       <Text
         className={`${classes.SkillsContainerText} ${

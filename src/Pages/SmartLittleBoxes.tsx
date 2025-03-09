@@ -1,18 +1,8 @@
-import {
-  AppShell,
-  Stack,
-  Text,
-  Title,
-  Anchor,
-  Group,
-  BackgroundImage,
-  Image,
-  Grid,
-  Tooltip,
-  List,
-} from "@mantine/core";
-import classes from "./projects.module.css";
-import React from "react";
+import { Stack, Text, Title, Anchor, List } from "@mantine/core";
+import StackContainer from "../Components/StackContainer/StackContainer";
+import TechStack from "../Components/ProjectTechStack/ProjectTechStack";
+import ProjectHeader from "../Components/ProjectHeader/ProjectHeader";
+import ProjectShell from "../Components/ProjectShell/ProjectShell";
 
 export default function SmartLittleBoxes() {
   const techStack = [
@@ -74,125 +64,80 @@ export default function SmartLittleBoxes() {
   ];
 
   return (
-    <AppShell padding="md" withBorder={false}>
-      <AppShell.Main>
-        <Stack maw={1280} mx={"auto"} className={classes.projectFont}>
-          <BackgroundImage src="/slb/slb_4.png" radius="md">
-            <Group justify="space-between" h={"400px"}>
-              <Text
-                size={"5vw"}
-                w={"auto"}
-                style={{
-                  alignSelf: "flex-end",
-                  fontWeight: "800",
-                  background:
-                    "linear-gradient(to bottom, white 50%, #aacdfc 50%)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  color: "transparent",
-                }}>
-                smartlittleboxes.com
-              </Text>
-            </Group>
-          </BackgroundImage>
-          <Stack
-            mt={"20vh"}
-            p={"xl"}
+    <ProjectShell>
+      <ProjectHeader
+        headerText="smartlittleboxes.com"
+        imageSrc="/slb/slb_4.png"></ProjectHeader>
+      <StackContainer>
+        <Title size={"5vw"} style={{ textAlign: "center" }}>
+          About the Project
+        </Title>
+        <Text style={{ textAlign: "justify", fontSize: "inherit" }}>
+          Smartlittleboxes is a user-friendly inventory management tool designed
+          to keep your belongings organized. Unable to find a suitable app, I
+          built my own solution. What began as a personal project has evolved
+          into a collaborative effort on Git, demonstrating my ability to work
+          with others.
+        </Text>
+      </StackContainer>
+      <StackContainer>
+        <Title size={"5vw"} style={{ textAlign: "center" }}>
+          Visit
+        </Title>
+        <Text mt="xl" style={{ textAlign: "justify", fontSize: "inherit" }}>
+          Feel free to visit{" "}
+          <Anchor
+            href="https://smartlittleboxes.com"
+            target="_blank"
+            underline="not-hover"
+            fw={700}
+            style={{ color: "inherit", fontSize: "inherit" }}>
+            smartlittleboxes.com
+          </Anchor>
+          , BUT(!) please note that it's still in development, and registration
+          isn't available yet.
+          <br /> To explore, use the following credentials:
+        </Text>{" "}
+        <Stack
+          mx={"auto"}
+          mt={"xl"}
+          style={{
+            fontSize: "inherit",
+            width: "fit-content",
+            border: "1px solid #FFF",
+            padding: "50px",
+            borderRadius: "var(--mantine-radius-xl)",
+          }}>
+          <Text
             style={{
-              background: "var(--mantine-color-dark-6)",
-              borderRadius: "var(--mantine-radius-xl)",
-            }}
-            className={classes.projectFont}>
-            {" "}
-            <Title size={"5vw"} style={{ textAlign: "center" }}>
-              About the Project
-            </Title>
-            <Text style={{ textAlign: "justify", fontSize: "inherit" }}>
-              Smartlittleboxes is a user-friendly inventory management tool
-              designed to keep your belongings organized. Unable to find a
-              suitable app, I built my own solution. What began as a personal
-              project has evolved into a collaborative effort on Git,
-              demonstrating my ability to work with others.
-            </Text>
-          </Stack>{" "}
-          <Stack
-            p={"xl"}
-            mt={"20vh"}
-            style={{
-              background: "var(--mantine-color-dark-6)",
-              borderRadius: "var(--mantine-radius-xl)",
-            }}
-            className={classes.projectFont}>
-            {" "}
-            <Title size={"5vw"} style={{ textAlign: "center" }}>
-              Visit
-            </Title>
-            <Text mt="xl" style={{ textAlign: "justify", fontSize: "inherit" }}>
-              Feel free to visit the{" "}
-              <Anchor
-                href="https://smartlittleboxes.com"
-                target="_blank"
-                underline="not-hover"
-                fw={700}
-                style={{ color: "inherit", fontSize: "inherit" }}>
-                smartlittleboxes.com
-              </Anchor>
-              , BUT(!) please note that it's still in development, and
-              registration isn't available yet.
-              <br /> To explore, use the following credentials: <br />
-              <span style={{ marginLeft: "10%" }}>username: user1</span>
-              <br />
-              <span style={{ marginLeft: "10%" }}>password: 123456</span>
-            </Text>
-          </Stack>
-          <Stack
-            p={"xl"}
-            mt={"20vh"}
-            style={{
-              background: "var(--mantine-color-dark-6)",
-              borderRadius: "var(--mantine-radius-xl)",
+              fontSize: "inherit",
             }}>
-            <Title size={"5vw"} style={{ textAlign: "center" }}>
-              The Projects Tech Stack
-            </Title>
-            <Grid
-              mt={"xl"}
-              align="center"
-              gutter={{ base: "xl", xs: "xl", md: "xl", xl: 50 }}
-              style={{ textAlign: "justify" }}>
-              {techStack.map((tech, index) => (
-                <React.Fragment key={`tech-${index}`}>
-                  <Grid.Col span={2}>
-                    <Tooltip label={tech.label}>
-                      <Image radius="md" src={tech.src} />
-                    </Tooltip>
-                  </Grid.Col>
-                  <Grid.Col span={10}>{tech.text}</Grid.Col>
-                </React.Fragment>
-              ))}
-            </Grid>
-          </Stack>
-          <Stack
-            p={"xl"}
-            mt={"20vh"}
+            username: user1
+          </Text>
+          <Text
             style={{
-              background: "var(--mantine-color-dark-6)",
-              borderRadius: "var(--mantine-radius-xl)",
+              fontSize: "inherit",
             }}>
-            <Title size={"5vw"} style={{ textAlign: "center" }}>
-              What's Next?
-            </Title>
-            <List className={classes.projectFont}>
-              <List.Item key="To-Do-1">
-                Switching from DynamoDB for saving item data to NeptuneDB
-              </List.Item>
-              <List.Item key="To-Do-2">File and image upload</List.Item>
-              <List.Item key="To-Do-3">Item categories</List.Item>
-              <List.Item key="To-Do-4">AI powered item search</List.Item>
-            </List>
-          </Stack>
+            password: 123456
+          </Text>
         </Stack>
-      </AppShell.Main>
-    </AppShell>
+      </StackContainer>
+      <StackContainer>
+        <TechStack techStack={techStack} />
+      </StackContainer>
+      <StackContainer>
+        <Title size={"5vw"} style={{ textAlign: "center" }}>
+          What's Next?
+        </Title>
+        <List style={{ fontSize: "inherit" }}>
+          <List.Item key="To-Do-1">
+            Switching from DynamoDB for saving item data to NeptuneDB
+          </List.Item>
+          <List.Item key="To-Do-2">File and image upload</List.Item>
+          <List.Item key="To-Do-3">Item categories</List.Item>
+          <List.Item key="To-Do-4">AI powered item search</List.Item>
+        </List>
+      </StackContainer>
+    </ProjectShell>
   );
 }

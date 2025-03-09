@@ -1,5 +1,5 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Box, Card, Group, Text, Image, Anchor } from "@mantine/core";
+import { Stack, Card, Group, Text, Image, Anchor, Space } from "@mantine/core";
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -38,7 +38,7 @@ export default function Projects() {
   });
 
   return (
-    <Box maw={1280} mx={"auto"}>
+    <Stack maw={1280} mx={"auto"}>
       <Text
         size={"10vw"}
         mx={"auto"}
@@ -64,7 +64,8 @@ export default function Projects() {
           description={card.description}
           projectHeaderHeight={projectHeaderHeight}></ProjectCard>
       ))}
-    </Box>
+      <Space h={"xl"} />
+    </Stack>
   );
 }
 
@@ -98,10 +99,10 @@ function ProjectCard({
       <Card
         withBorder
         radius="xl"
-        mah={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}>
+        h={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}>
         <Card.Section withBorder inheritPadding py="lg">
           <Group justify="space-between">
-            <Text fw={600} size="40px">
+            <Text fw={600} size="7vw">
               {projectTitle}
             </Text>
             <FaExternalLinkAlt size={32} />
