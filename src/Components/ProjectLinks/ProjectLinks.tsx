@@ -16,7 +16,7 @@ export default function ProjectLinks({
   gitHubInfo,
 }: ProjectLinksProps) {
   return (
-    <Stack mt="xl">
+    <Stack>
       <Group>
         <TbFileTypeHtml />
         <Anchor

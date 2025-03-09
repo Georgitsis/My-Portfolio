@@ -22,6 +22,7 @@ export default function ProjectHeader({
     <Box ref={ref}>
       <Image src={imageSrc} radius="xl"></Image>
       <Text
+        mt="xl"
         size={headerFontSize}
         style={{
           fontWeight: "800",
