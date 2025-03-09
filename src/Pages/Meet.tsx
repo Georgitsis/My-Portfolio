@@ -13,29 +13,9 @@ export default function Meet() {
       label: "React",
     },
     {
-      text: "TypeScript is used for type safety.",
-      src: "/skills_svgs/ts.svg",
-      label: "TypeScript",
-    },
-    {
-      text: "Mantine offers a comprehensive styling solution, a wide range of UI components, and a flexible design system for building modern and responsive interfaces.",
-      src: "/skills_svgs/mantine-seeklogo.svg",
-      label: "Mantine",
-    },
-    {
-      text: "Cognito is used in the project for handling user authentication and managing access control.",
-      src: "/skills_svgs/Cognito.svg",
-      label: "Cognito",
-    },
-    {
-      text: "A S3 Bucket is used to store static frontend assets, such as HTML, CSS, and JavaScript files.",
-      src: "/skills_svgs/s3.svg",
-      label: "S3",
-    },
-    {
-      text: "Python's FastAPI is used in my project for building high-performance, asynchronous backend APIs.",
-      src: "/skills_svgs/python.svg",
-      label: "FastAPI",
+      text: "OAuth 2.0 is a secure authorization framework that grants limited access via tokens without sharing credentials.",
+      src: "/skills_svgs/oauth.svg",
+      label: "Oauth 2.0",
     },
     {
       text: "AWS Lambda function runs the Python code that powers the APIs, offering a serverless approach for better scalability and performance.",
@@ -43,24 +23,19 @@ export default function Meet() {
       label: "AWS Lambda",
     },
     {
-      text: "The project uses DynamoDB for scalable and fast data storage and retrieval.",
-      src: "/skills_svgs/DynamoDB.svg",
-      label: "DynamoDB",
+      text: "Google Cloud provides tools for integrating Google services, like Maps and Calendar, into applications, allowing access to data and features programmatically.",
+      src: "/skills_svgs/google_cloud.svg",
+      label: "Google Cloud",
     },
     {
-      text: "Amazon Route 53 is used in my project for managing the DNS, ensuring reliable and efficient routing of traffic to the appropriate resources.",
-      src: "/skills_svgs/route53.svg",
-      label: "Route 53",
+      text: "Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.",
+      src: "/skills_svgs/jest.svg",
+      label: "Jest",
     },
     {
-      text: "Amazon CloudFront is used as a content delivery network, optimizing the delivery of static assets like images, CSS, and JavaScript to users across the globe.",
-      src: "/skills_svgs/CloudFront.svg",
-      label: "CloudFront",
-    },
-    {
-      text: "A CI/CD pipeline is implemented on Git to automate the process of testing, building, and deploying the project, ensuring faster and more reliable releases.",
-      src: "/skills_svgs/ci-cd.svg",
-      label: "CI/CD",
+      text: "Recharts is a React charting library built on D3.js, offering customizable and responsive charts.",
+      src: "/skills_svgs/recharts.svg",
+      label: "Rechart",
     },
   ];
 
@@ -70,77 +45,30 @@ export default function Meet() {
         headerText="Meet"
         imageSrc="/meet/meet_1.png"></ProjectHeader>
       <ProjectLinks
-        WebSiteLink="https://georgitsis.github.io/meet/"
-        GitHubLink=""></ProjectLinks>
+        webSiteLink="https://georgitsis.github.io/meet/"
+        gitHubLink="https://github.com/Georgitsis/meet"></ProjectLinks>
       <StackContainer>
         <Title size={"5vw"} style={{ textAlign: "center" }}>
           About the Project
         </Title>
         <Text style={{ textAlign: "justify", fontSize: "inherit" }}>
-          Smartlittleboxes is a user-friendly inventory management tool designed
-          to keep your belongings organized. Unable to find a suitable app, I
-          built my own solution. What began as a personal project has evolved
-          into a collaborative effort on Git, demonstrating my ability to work
-          with others.
+          Meet App is a React-based event-tracking Progressive Web App (PWA)
+          designed to keep users updated on upcoming CareerFoundry events. Built
+          using Test-Driven Development (TDD), it integrates with the Google
+          Calendar API to fetch event details securely via an OAuth2
+          authentication flow.
+          <br />
+          The app utilizes AWS Lambda for serverless functions and an
+          authorization server to handle authentication. Data is fetched
+          efficiently using React Axios with async/await, ensuring a smooth user
+          experience. Additionally, Meet App features an alert system
+          implemented using an object-oriented programming (OOP) approach,
+          providing timely notifications about events.
         </Text>
       </StackContainer>
-      <StackContainer>
-        <Title size={"5vw"} style={{ textAlign: "center" }}>
-          Visit
-        </Title>
-        <Text mt="xl" style={{ textAlign: "justify", fontSize: "inherit" }}>
-          Feel free to visit{" "}
-          <Anchor
-            href="https://smartlittleboxes.com"
-            target="_blank"
-            underline="not-hover"
-            fw={700}
-            style={{ color: "inherit", fontSize: "inherit" }}>
-            smartlittleboxes.com
-          </Anchor>
-          , BUT(!) please note that it's still in development, and registration
-          isn't available yet.
-          <br /> To explore, use the following credentials:
-        </Text>{" "}
-        <Stack
-          mx={"auto"}
-          mt={"xl"}
-          style={{
-            fontSize: "inherit",
-            width: "fit-content",
-            border: "1px solid #FFF",
-            padding: "50px",
-            borderRadius: "var(--mantine-radius-xl)",
-          }}>
-          <Text
-            style={{
-              fontSize: "inherit",
-            }}>
-            username: user1
-          </Text>
-          <Text
-            style={{
-              fontSize: "inherit",
-            }}>
-            password: 123456
-          </Text>
-        </Stack>
-      </StackContainer>
+
       <StackContainer>
         <TechStack techStack={techStack} />
-      </StackContainer>
-      <StackContainer>
-        <Title size={"5vw"} style={{ textAlign: "center" }}>
-          What's Next?
-        </Title>
-        <List style={{ fontSize: "inherit" }}>
-          <List.Item key="To-Do-1">
-            Switching from DynamoDB for saving item data to NeptuneDB
-          </List.Item>
-          <List.Item key="To-Do-2">File and image upload</List.Item>
-          <List.Item key="To-Do-3">Item categories</List.Item>
-          <List.Item key="To-Do-4">AI powered item search</List.Item>
-        </List>
       </StackContainer>
     </ProjectShell>
   );

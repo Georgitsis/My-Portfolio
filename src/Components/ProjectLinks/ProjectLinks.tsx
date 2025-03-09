@@ -3,17 +3,17 @@ import { FaGithub } from "react-icons/fa";
 import { TbFileTypeHtml } from "react-icons/tb";
 
 interface ProjectLinksProps {
-  WebSiteLink: string;
-  GitHubLink: string;
-  WebSiteInfo?: string;
-  GitHubInfo?: string;
+  webSiteLink: string;
+  gitHubLink: string;
+  webSiteInfo?: string;
+  gitHubInfo?: string;
 }
 
 export default function ProjectLinks({
-  WebSiteLink,
-  GitHubLink,
-  WebSiteInfo,
-  GitHubInfo,
+  webSiteLink,
+  gitHubLink,
+  webSiteInfo,
+  gitHubInfo,
 }: ProjectLinksProps) {
   return (
     <Stack mt="xl">
@@ -21,23 +21,27 @@ export default function ProjectLinks({
         <TbFileTypeHtml />
         <Anchor
           style={{ fontSize: "inherit", color: "inherit" }}
-          href={WebSiteLink}
+          href={webSiteLink}
           target="_blank">
           <Text style={{ fontSize: "inherit" }}>Visit the web site</Text>
         </Anchor>
-        {WebSiteInfo && <Text>{WebSiteInfo}</Text>}
+        {webSiteInfo && (
+          <Text style={{ fontSize: "inherit" }}>{webSiteInfo}</Text>
+        )}
       </Group>
       <Group>
         <FaGithub />
         <Anchor
           style={{ fontSize: "inherit", color: "inherit" }}
-          href={GitHubLink}
+          href={gitHubLink}
           target="_blank">
           <Text style={{ fontSize: "inherit" }}>
             Checkout the Code on Github
           </Text>
         </Anchor>
-        {GitHubInfo && <Text>{GitHubInfo}</Text>}
+        {gitHubInfo && (
+          <Text style={{ fontSize: "inherit" }}>{gitHubInfo}</Text>
+        )}
       </Group>
     </Stack>
   );

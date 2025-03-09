@@ -1,8 +1,9 @@
-import { Stack, Text, Title, Anchor, List } from "@mantine/core";
+import { Text, Title, List } from "@mantine/core";
 import StackContainer from "../Components/StackContainer/StackContainer";
 import TechStack from "../Components/ProjectTechStack/ProjectTechStack";
 import ProjectHeader from "../Components/ProjectHeader/ProjectHeader";
 import ProjectShell from "../Components/ProjectShell/ProjectShell";
+import ProjectLinks from "../Components/ProjectLinks/ProjectLinks";
 
 export default function SmartLittleBoxes() {
   const techStack = [
@@ -68,6 +69,10 @@ export default function SmartLittleBoxes() {
       <ProjectHeader
         headerText="smartlittleboxes.com"
         imageSrc="/slb/slb_4.png"></ProjectHeader>
+      <ProjectLinks
+        webSiteLink="https://smartlittleboxes.com"
+        gitHubLink="https://github.com/0hh/where-is-my-shit-24"
+        webSiteInfo="(username: user1, password: 123456. Registration isn not available yet.)"></ProjectLinks>
       <StackContainer>
         <Title size={"5vw"} style={{ textAlign: "center" }}>
           About the Project
@@ -80,48 +85,7 @@ export default function SmartLittleBoxes() {
           with others.
         </Text>
       </StackContainer>
-      <StackContainer>
-        <Title size={"5vw"} style={{ textAlign: "center" }}>
-          Visit
-        </Title>
-        <Text mt="xl" style={{ textAlign: "justify", fontSize: "inherit" }}>
-          Feel free to visit{" "}
-          <Anchor
-            href="https://smartlittleboxes.com"
-            target="_blank"
-            underline="not-hover"
-            fw={700}
-            style={{ color: "inherit", fontSize: "inherit" }}>
-            smartlittleboxes.com
-          </Anchor>
-          , BUT(!) please note that it's still in development, and registration
-          isn't available yet.
-          <br /> To explore, use the following credentials:
-        </Text>{" "}
-        <Stack
-          mx={"auto"}
-          mt={"xl"}
-          style={{
-            fontSize: "inherit",
-            width: "fit-content",
-            border: "1px solid #FFF",
-            padding: "50px",
-            borderRadius: "var(--mantine-radius-xl)",
-          }}>
-          <Text
-            style={{
-              fontSize: "inherit",
-            }}>
-            username: user1
-          </Text>
-          <Text
-            style={{
-              fontSize: "inherit",
-            }}>
-            password: 123456
-          </Text>
-        </Stack>
-      </StackContainer>
+
       <StackContainer>
         <TechStack techStack={techStack} />
       </StackContainer>
