@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Stack, Card, Group, Text, Image, Anchor, Space } from "@mantine/core";
+import { useElementSize } from "@mantine/hooks";
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -13,11 +14,25 @@ export default function Projects() {
       projectLink: "/smartlittleboxes",
     },
     {
-      title: "MyFlix",
+      title: "MyFlix React FE",
       imageSource: "/my_flix/my_flix_react_client.png",
       description:
-        "Meet App helps users stay updated on upcoming CareerFoundry events. It leverages OAuth 2.0 for authentication and the Google API to pull events directly from a connected calendar.",
-      projectLink: "/meet",
+        "MyFlix is a full-stack movie library app built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to register, search movies, view details, and curate a list of favorites.",
+      projectLink: "/myflix_react",
+    },
+    {
+      title: "MyFlix Angular FE",
+      imageSource: "/my_flix/my_flix_angular_client.png",
+      description:
+        "MyFlix is a full-stack movie library app built with the MEAN (MongoDB, Express, Angular, Node.js) stack. It allows users to register, search movies, view details, and curate a list of favorites.",
+      projectLink: "/myflix_angular",
+    },
+    {
+      title: "MyFlix Back-end",
+      imageSource: "/my_flix/my_flix_backend.png",
+      description:
+        "This is the backend to the myFlix front end web apps. It establishes a secure server using Express.js, connects to a MongoDB database, and defines API endpoints for actions like retrieving movie information and user data. It also handles user authentication using JWT tokens.",
+      projectLink: "/myflix_backend",
     },
     {
       title: "Meet",
@@ -93,11 +108,16 @@ function ProjectCard({
   projectHeaderHeight,
   projectLink,
 }: ProjectCardPropsType) {
-  const componentRef = useRef<HTMLAnchorElement | null>(null);
   const navigate = useNavigate();
+  const { ref, width } = useElementSize();
+  const [headerFontSize, setHeaderFontSize] = useState<string>();
+  useEffect(() => {
+    const widthString = (width * 0.08).toString().concat("px");
+    setHeaderFontSize(widthString);
+  }, [width]);
   return (
     <Anchor
-      ref={componentRef}
+      ref={ref}
       underline="never"
       style={{
         position: "sticky",
@@ -112,7 +132,7 @@ function ProjectCard({
         h={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}>
         <Card.Section withBorder inheritPadding py="lg">
           <Group justify="space-between">
-            <Text fw={600} size="7vw">
+            <Text fw={600} size={headerFontSize}>
               {projectTitle}
             </Text>
             <FaExternalLinkAlt size={32} />

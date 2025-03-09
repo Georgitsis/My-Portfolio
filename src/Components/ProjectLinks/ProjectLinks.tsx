@@ -9,6 +9,7 @@ interface ProjectLinksProps {
   gitHubLink: string;
   webSiteInfo?: string;
   gitHubInfo?: string;
+  generalInfo?: string;
 }
 
 export default function ProjectLinks({
@@ -17,9 +18,13 @@ export default function ProjectLinks({
   gitHubLink,
   webSiteInfo,
   gitHubInfo,
+  generalInfo,
 }: ProjectLinksProps) {
   return (
     <Stack>
+      {generalInfo && (
+        <Text style={{ fontSize: "inherit" }}>{generalInfo}</Text>
+      )}
       {webSiteLink && (
         <Group>
           <TbFileTypeHtml />

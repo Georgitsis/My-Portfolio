@@ -26,6 +26,7 @@ export default function ProjectHeader({
         size={headerFontSize}
         style={{
           fontWeight: "800",
+          lineHeight: "1.3",
           background: "linear-gradient(to bottom, white 50%, #aacdfc 50%)",
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
