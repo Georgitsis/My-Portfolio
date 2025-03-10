@@ -2,7 +2,7 @@ import { Group, Stack, Anchor, Transition } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import classes from "./ComponentStyles.module.css";
-//import classes from "./ComponentStyles.module.css";
+import { TbFileCv } from "react-icons/tb";
 import { useHover } from "@mantine/hooks";
 
 interface HeaderComponentProps {
