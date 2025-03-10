@@ -8,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       title: "smartlittleboxes.com",
-      imageSource: "/slb/slb_3.png",
+      imageSource: "/slb/slb_6.jpg",
       description:
         "An easy-to-use inventory management tool to track, organize, and manage your items efficiently.",
       projectLink: "/smartlittleboxes",
@@ -29,9 +29,9 @@ export default function Projects() {
     },
     {
       title: "MyFlix Back-end",
-      imageSource: "/my_flix/my_flix_backend.png",
+      imageSource: "/my_flix/my_flix_backend.jpg",
       description:
-        "This is the backend to the myFlix front end web apps. It establishes a secure server using Express.js, connects to a MongoDB database, and defines API endpoints for actions like retrieving movie information and user data. It also handles user authentication using JWT tokens.",
+        "This is the backend for myFlix, built with Express.js and MongoDB. It provides secure API endpoints for retrieving movie and user data, managing accounts, and handling authentication with JWT tokens.",
       projectLink: "/myflix_backend",
     },
     {
@@ -43,7 +43,7 @@ export default function Projects() {
     },
     {
       title: "Chat App",
-      imageSource: "/chat/ChatApp.png",
+      imageSource: "/chat/chat_app.png",
       description:
         "ChatApp is a React Native mobile app built with Gifted Chat, allowing users to log in anonymously and chat in real-time. It supports sending pictures, taking new photos, and sharing locations, with installation via Expo.",
       projectLink: "/chatapp",
@@ -112,6 +112,9 @@ function ProjectCard({
   const { ref, width } = useElementSize();
   const [headerFontSize, setHeaderFontSize] = useState<string>();
   useEffect(() => {
+    console.log(width);
+    console.log((width * 4) / 5);
+
     const widthString = (width * 0.08).toString().concat("px");
     setHeaderFontSize(widthString);
   }, [width]);
@@ -129,7 +132,8 @@ function ProjectCard({
       <Card
         withBorder
         radius="xl"
-        h={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}>
+        mah={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}
+        maw={"960px"}>
         <Card.Section withBorder inheritPadding py="lg">
           <Group justify="space-between">
             <Text fw={600} size={headerFontSize}>
@@ -142,12 +146,7 @@ function ProjectCard({
           </Text>
         </Card.Section>
         <Card.Section>
-          <Image
-            src={imageScr}
-            style={{
-              width: "100%",
-            }}
-          />
+          <Image src={imageScr} mx="auto" h="100%" w={"auto"} maw={"100%"} />
         </Card.Section>
       </Card>
     </Anchor>

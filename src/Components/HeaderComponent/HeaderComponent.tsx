@@ -1,9 +1,9 @@
 import { Group, Stack, Anchor, Transition } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
-import { FaRegUser } from "react-icons/fa";
+//import { FaRegUser } from "react-icons/fa";
 import classes from "./ComponentStyles.module.css";
 import { TbFileCv } from "react-icons/tb";
-import { useHover } from "@mantine/hooks";
+//import { useHover } from "@mantine/hooks";
 
 interface HeaderComponentProps {
   startInitialTransitions: boolean;
@@ -11,7 +11,7 @@ interface HeaderComponentProps {
 export default function HeaderComponent({
   startInitialTransitions,
 }: HeaderComponentProps) {
-  const { hovered, ref } = useHover();
+  //const { hovered, ref } = useHover();
   // const [];
   return (
     <Transition
@@ -31,45 +31,17 @@ export default function HeaderComponent({
           mx={"auto"}
           px="md"
           pb="md">
-          <Stack align="center" justify="flex-end" h={"100%"} p="sm">
-            <Group ref={ref} style={{ cursor: "pointer" }}>
-              <FaRegUser size="32" />
-              <Transition
-                mounted={hovered}
-                transition="fade-right"
-                duration={400}
-                timingFunction="ease">
-                {(styles) => (
-                  <Anchor
-                    underline="never"
-                    style={{ ...styles, color: "inherit" }}
-                    size="xl">
-                    Projects
-                  </Anchor>
-                )}
-              </Transition>
-            </Group>
-          </Stack>
-          <Stack
-            align="center"
-            justify="flex-end"
-            h={"100%"}
-            p="sm"
+          <Anchor underline="never" style={{ color: "inherit" }} size="xl">
+            <TbFileCv size="48" />
+          </Anchor>
+
+          <Anchor
+            href="mailto:georgitsis.theodoros@gmail.com"
             style={{
-              background: "var(--mantine-color-dark-6)",
-              borderBottomLeftRadius: "var(--mantine-radius-md)",
-              borderBottomRightRadius: "var(--mantine-radius-md)",
+              color: "inherit",
             }}>
-            <Anchor
-              href="mailto:georgitsis.theodoros@gmail.com"
-              style={{
-                color: "inherit",
-                display: "inline-flex",
-                alignItems: "center",
-              }}>
-              <FaRegMessage size="32" />
-            </Anchor>
-          </Stack>
+            <FaRegMessage size="48" />
+          </Anchor>
         </Group>
       )}
     </Transition>
