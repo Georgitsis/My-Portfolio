@@ -15,14 +15,14 @@ export default function Projects() {
     },
     {
       title: "MyFlix React FE",
-      imageSource: "/my_flix/my_flix_react_client.png",
+      imageSource: "/my_flix/my_flix_react_client.jpg",
       description:
         "MyFlix is a full-stack movie library app built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to register, search movies, view details, and curate a list of favorites.",
       projectLink: "/myflix_react",
     },
     {
       title: "MyFlix Angular FE",
-      imageSource: "/my_flix/my_flix_angular_client.png",
+      imageSource: "/my_flix/my_flix_angular_client.jpg",
       description:
         "MyFlix is a full-stack movie library app built with the MEAN (MongoDB, Express, Angular, Node.js) stack. It allows users to register, search movies, view details, and curate a list of favorites.",
       projectLink: "/myflix_angular",
@@ -112,9 +112,6 @@ function ProjectCard({
   const { ref, width } = useElementSize();
   const [headerFontSize, setHeaderFontSize] = useState<string>();
   useEffect(() => {
-    console.log(width);
-    console.log((width * 4) / 5);
-
     const widthString = (width * 0.08).toString().concat("px");
     setHeaderFontSize(widthString);
   }, [width]);

@@ -7,20 +7,14 @@ export default function Skills() {
   const [scroll] = useWindowScroll();
   const componentRef = useRef<HTMLDivElement | null>(null);
   const [fadeIn, setFadeIn] = useState<boolean>(false);
+  const [secondFadeIn, setSecondFadeIn] = useState<boolean>(false);
 
-  const techStack1 = [
+  const techStack = [
     { label: "Git Version Control", src: "/skills_svgs/git.svg" },
     { label: "JavaScript", src: "/skills_svgs/js.svg" },
     { label: "TypeScript", src: "/skills_svgs/ts.svg" },
     { label: "React", src: "/skills_svgs/react.svg" },
     { label: "Angular", src: "/skills_svgs/angular.svg" },
-    { label: "Node.js", src: "/skills_svgs/nodejs.svg" },
-    { label: "C++", src: "/skills_svgs/C++.svg" },
-    { label: "AWS", src: "/skills_svgs/aws.svg" },
-    { label: "Docker", src: "/skills_svgs/docker.svg" },
-    { label: "MongoDB", src: "/skills_svgs/mongodb.svg" },
-  ];
-  const techStack2 = [
     { label: "Node.js", src: "/skills_svgs/nodejs.svg" },
     { label: "C++", src: "/skills_svgs/C++.svg" },
     { label: "AWS", src: "/skills_svgs/aws.svg" },
@@ -39,12 +33,13 @@ export default function Skills() {
 
   useEffect(() => {
     if (fadeIn) {
-      const counterLength = techStack1.length + techStack2.length;
+      const counterLength = techStack.length;
       const delayTimeout = setTimeout(() => {
         const interval = setInterval(() => {
           setIndexCounter((prev) => {
             if (prev + 1 >= counterLength) {
               clearInterval(interval);
+              setSecondFadeIn(true);
               return counterLength;
             }
             return prev + 1;
@@ -90,7 +85,7 @@ export default function Skills() {
         spacing={{ base: 10, sm: "xl" }}
         verticalSpacing={{ base: 10, sm: "xl" }}>
         {" "}
-        {techStack1.map((tech, index) => (
+        {techStack.map((tech, index) => (
           <Tooltip key={tech.label} label={tech.label}>
             <Image
               radius="md"
@@ -100,7 +95,7 @@ export default function Skills() {
                   ? ""
                   : index === indexCounter
                   ? classes.imageAnimation
-                  : classes.imageInvisible
+                  : classes.invisible
               }
             />
           </Tooltip>
@@ -110,7 +105,7 @@ export default function Skills() {
       <Space h="md" />
       <Text
         className={`${classes.SkillsContainerText} ${
-          fadeIn ? classes.FadeInTransition : ""
+          secondFadeIn ? classes.FadeInTransition : ""
         } ${classes.secondSkillsText}`}
         fs="italic"
         style={{ textAlign: "justify", alignSelf: "center" }}>

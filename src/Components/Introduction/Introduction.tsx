@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from "react";
-import { Group, Text, Stack } from "@mantine/core";
+import { Text, Stack } from "@mantine/core";
 import { useViewportSize, useWindowScroll } from "@mantine/hooks";
 import classes from "./Introduction.module.css";
 
 export default function Introduction() {
-  const { height, width } = useViewportSize();
+  const { height } = useViewportSize();
   const [scroll] = useWindowScroll();
   const componentRef = useRef<HTMLDivElement | null>(null);
   const [fadeIn, setFadeIn] = useState<boolean>(false);
@@ -12,13 +12,16 @@ export default function Introduction() {
   const entireFirstTextToDisplayRef = useRef<string[]>([
     "Hi, ",
     "I'm ",
-    "Theo ",
+    "Theo, ",
     "a ",
     "full-",
     "stack ",
     "developer ",
     "based ",
     "in ",
+    "the ",
+    "Oslo ",
+    "area, ",
     "Norway.",
   ]);
   const [animatedSpans, setAnimatedSpans] = useState<string[]>([]);
@@ -80,9 +83,11 @@ export default function Introduction() {
           alignSelf: "flex-start",
           opacity: "0",
         }}>
-        I'm eager to apply my skills in web development to create meaningful and
-        engaging digital experiences that captivate users, enhance usability,
-        and drive innovation.
+        I've always been passionate about technology, and now I'm focusing on my
+        new career in web development. While I'm still gaining experience, I've
+        successfully tackled challenges and built the features I've set out to
+        create. I'm committed to learning, improving, and delivering
+        user-focused digital experiences.
       </Text>
     </Stack>
   );

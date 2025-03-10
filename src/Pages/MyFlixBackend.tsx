@@ -8,34 +8,19 @@ import ProjectLinks from "../Components/ProjectLinks/ProjectLinks";
 export default function MyFlixBackend() {
   const techStack = [
     {
-      text: "The project's frontend is built with React, a JavaScript library for creating dynamic and reusable user interfaces.",
-      src: "/skills_svgs/react.svg",
-      label: "React",
+      text: "I used Node.js and Express to build a fast and scalable back-end, handling API requests, managing routes, and integrating with the database efficiently.",
+      src: "/skills_svgs/nodejs.svg",
+      label: "Node.js Express",
     },
     {
-      text: "OAuth 2.0 is a secure authorization framework that grants limited access via tokens without sharing credentials.",
-      src: "/skills_svgs/oauth.svg",
-      label: "Oauth 2.0",
-    },
-    {
-      text: "AWS Lambda function runs the Python code that powers the APIs, offering a serverless approach for better scalability and performance.",
+      text: "An AWS Lambda function runs the Node.js code that powers the APIs, offering a serverless approach for better scalability and performance.",
       src: "/skills_svgs/Lambda.svg",
       label: "AWS Lambda",
     },
     {
-      text: "Google Cloud provides tools for integrating Google services, like Maps and Calendar, into applications, allowing access to data and features programmatically.",
-      src: "/skills_svgs/google_cloud.svg",
-      label: "Google Cloud",
-    },
-    {
-      text: "Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.",
-      src: "/skills_svgs/jest.svg",
-      label: "Jest",
-    },
-    {
-      text: "Recharts is a React charting library built on D3.js, offering customizable and responsive charts.",
-      src: "/skills_svgs/recharts.svg",
-      label: "Rechart",
+      text: "I store and manage data in MongoDB, a flexible NoSQL database that enables efficient querying and scalability for my application.",
+      src: "/skills_svgs/mongodb.svg",
+      label: "MongoDB",
     },
   ];
 

@@ -13,7 +13,7 @@ export default function MyFlixAngular() {
       label: "Angular",
     },
     {
-      text: "I used SASS in my project to streamline styling by leveraging variables, nesting, and mixins, making the CSS more maintainable and scalable.",
+      text: "SASS is used in this project to streamline styling by leveraging variables, nesting, and mixins, making the CSS more maintainable and scalable.",
       src: "/skills_svgs/sass.svg",
       label: "SASS",
     },
@@ -23,17 +23,17 @@ export default function MyFlixAngular() {
       label: "Node.js Express",
     },
     {
-      text: "AWS Lambda function runs the Python code that powers the APIs, offering a serverless approach for better scalability and performance.",
+      text: "An AWS Lambda function runs the Node.js code that powers the APIs, offering a serverless approach for better scalability and performance.",
       src: "/skills_svgs/Lambda.svg",
       label: "AWS Lambda",
     },
     {
-      text: "JI used MongoDB to store and manage data in a flexible, NoSQL database, enabling efficient querying and scalability for my application.",
+      text: "I store and manage data in MongoDB, a flexible NoSQL database that enables efficient querying and scalability for my application.",
       src: "/skills_svgs/mongodb.svg",
       label: "MongoDB",
     },
     {
-      text: "I used Bootstrap to quickly design a responsive and modern user interface, leveraging its pre-built components and grid system for consistency and flexibility.",
+      text: "I leveraged Bootstrap to quickly design a responsive and modern user interface, utilizing its pre-built components and grid system for consistency and flexibility.",
       src: "/skills_svgs/bootstrap.svg",
       label: "Bootstrap",
     },
