@@ -68,7 +68,7 @@ export default function SmartLittleBoxes() {
     <ProjectShell>
       <ProjectHeader
         headerText="smartlittleboxes.com"
-        imageSrc="/slb/slb_4.png"></ProjectHeader>
+        imageSrc="/slb/slb_7.png"></ProjectHeader>
       <ProjectLinks
         webSiteLink="https://smartlittleboxes.com"
         gitHubLink="https://github.com/0hh/where-is-my-shit-24"
