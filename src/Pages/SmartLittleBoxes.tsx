@@ -19,7 +19,7 @@ export default function SmartLittleBoxes() {
     },
     {
       text: "Mantine offers a comprehensive styling solution, a wide range of UI components, and a flexible design system for building modern and responsive interfaces.",
-      src: "/skills/mantine-seeklogo.svg",
+      src: "/skills/mantine.svg",
       label: "Mantine",
     },
     {
