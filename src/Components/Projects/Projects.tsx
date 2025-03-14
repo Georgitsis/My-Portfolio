@@ -130,7 +130,8 @@ function ProjectCard({
         withBorder
         radius="xl"
         mah={`calc(100vh - 5vh - ${projectHeaderHeight}px)`}
-        maw={"960px"}>
+        maw={"960px"}
+        mx={"auto"}>
         <Card.Section withBorder inheritPadding py="lg">
           <Group justify="space-between">
             <Text fw={600} size={headerFontSize}>
