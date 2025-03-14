@@ -1,9 +1,7 @@
-import { Group, Stack, Anchor, Transition } from "@mantine/core";
+import { Group, Anchor, Transition } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
-//import { FaRegUser } from "react-icons/fa";
 import classes from "./ComponentStyles.module.css";
 import { TbFileCv } from "react-icons/tb";
-//import { useHover } from "@mantine/hooks";
 
 interface HeaderComponentProps {
   startInitialTransitions: boolean;
@@ -11,8 +9,6 @@ interface HeaderComponentProps {
 export default function HeaderComponent({
   startInitialTransitions,
 }: HeaderComponentProps) {
-  //const { hovered, ref } = useHover();
-  // const [];
   return (
     <Transition
       mounted={startInitialTransitions}
@@ -31,9 +27,33 @@ export default function HeaderComponent({
           mx={"auto"}
           px="md"
           pb="md">
-          <Anchor underline="never" style={{ color: "inherit" }} size="xl">
+          <Group>
             <TbFileCv size="48" />
-          </Anchor>
+            <Anchor
+              href="/files/CV_eng.pdf"
+              target="_blank"
+              underline="never"
+              style={{ color: "inherit" }}
+              size="xl">
+              eng
+            </Anchor>
+            <Anchor
+              href="/files/CV_ger.pdf"
+              target="_blank"
+              underline="never"
+              style={{ color: "inherit" }}
+              size="xl">
+              deu
+            </Anchor>
+            <Anchor
+              href="/files/CV_nor.pdf"
+              target="_blank"
+              underline="never"
+              style={{ color: "inherit" }}
+              size="xl">
+              nor
+            </Anchor>
+          </Group>
 
           <Anchor
             href="mailto:georgitsis.theodoros@gmail.com"
@@ -47,3 +67,6 @@ export default function HeaderComponent({
     </Transition>
   );
 }
+/*          <Anchor underline="never" style={{ color: "inherit" }} size="xl">
+            <TbFileCv size="48" />
+          </Anchor>*/
