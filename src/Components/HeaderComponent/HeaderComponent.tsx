@@ -1,4 +1,4 @@
-import { Group, Anchor, Transition } from "@mantine/core";
+import { Group, Anchor, Transition, Image } from "@mantine/core";
 import { FaRegMessage } from "react-icons/fa6";
 import classes from "./ComponentStyles.module.css";
 import { TbFileCv } from "react-icons/tb";
@@ -35,7 +35,7 @@ export default function HeaderComponent({
               underline="never"
               style={{ color: "inherit" }}
               size="xl">
-              eng
+              <Image w="32px" src="/flags/eng_flag.svg" />
             </Anchor>
             <Anchor
               href="/files/CV_ger.pdf"
@@ -43,7 +43,7 @@ export default function HeaderComponent({
               underline="never"
               style={{ color: "inherit" }}
               size="xl">
-              deu
+              <Image w="32px" src="/flags/ger_flag.svg" />
             </Anchor>
             <Anchor
               href="/files/CV_nor.pdf"
@@ -51,7 +51,7 @@ export default function HeaderComponent({
               underline="never"
               style={{ color: "inherit" }}
               size="xl">
-              nor
+              <Image w="32px" src="/flags/nor_flag.svg" />
             </Anchor>
           </Group>
 
