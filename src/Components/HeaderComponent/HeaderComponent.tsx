@@ -1,4 +1,5 @@
 import { Group, Anchor, Transition, Image } from "@mantine/core";
+import { useHover } from "@mantine/hooks";
 import { FaRegMessage } from "react-icons/fa6";
 import classes from "./ComponentStyles.module.css";
 import { TbFileCv } from "react-icons/tb";
@@ -9,6 +10,7 @@ interface HeaderComponentProps {
 export default function HeaderComponent({
   startInitialTransitions,
 }: HeaderComponentProps) {
+  const { hovered, ref } = useHover();
   return (
     <Transition
       mounted={startInitialTransitions}
@@ -27,32 +29,42 @@ export default function HeaderComponent({
           mx={"auto"}
           px="md"
           pb="md">
-          <Group>
+          <Group ref={ref}>
             <TbFileCv size="48" />
-            <Anchor
-              href="/files/CV_eng.pdf"
-              target="_blank"
-              underline="never"
-              style={{ color: "inherit" }}
-              size="xl">
-              <Image w="32px" src="/flags/eng_flag.svg" />
-            </Anchor>
-            <Anchor
-              href="/files/CV_ger.pdf"
-              target="_blank"
-              underline="never"
-              style={{ color: "inherit" }}
-              size="xl">
-              <Image w="32px" src="/flags/ger_flag.svg" />
-            </Anchor>
-            <Anchor
-              href="/files/CV_nor.pdf"
-              target="_blank"
-              underline="never"
-              style={{ color: "inherit" }}
-              size="xl">
-              <Image w="32px" src="/flags/nor_flag.svg" />
-            </Anchor>
+            <Transition
+              mounted={hovered}
+              transition="fade-right"
+              duration={400}
+              timingFunction="ease">
+              {(styles) => (
+                <Group style={styles}>
+                  <Anchor
+                    href="/files/CV_eng.pdf"
+                    target="_blank"
+                    underline="never"
+                    style={{ color: "inherit" }}
+                    size="xl">
+                    <Image w="32px" src="/flags/eng_flag.svg" />
+                  </Anchor>
+                  <Anchor
+                    href="/files/CV_ger.pdf"
+                    target="_blank"
+                    underline="never"
+                    style={{ color: "inherit" }}
+                    size="xl">
+                    <Image w="32px" src="/flags/ger_flag.svg" />
+                  </Anchor>
+                  <Anchor
+                    href="/files/CV_nor.pdf"
+                    target="_blank"
+                    underline="never"
+                    style={{ color: "inherit" }}
+                    size="xl">
+                    <Image w="32px" src="/flags/nor_flag.svg" />
+                  </Anchor>
+                </Group>
+              )}
+            </Transition>
           </Group>
 
           <Anchor
