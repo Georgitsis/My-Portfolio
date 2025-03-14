@@ -9,32 +9,32 @@ export default function MyFlixReact() {
   const techStack = [
     {
       text: "This project is built with React, a JavaScript library for creating dynamic and reusable user interfaces.",
-      src: "/skills_svgs/react.svg",
+      src: "/skills/react.svg",
       label: "React",
     },
     {
       text: "SASS is used in this project to streamline styling by leveraging variables, nesting, and mixins, making the CSS more maintainable and scalable.",
-      src: "/skills_svgs/sass.svg",
+      src: "/skills/sass.svg",
       label: "SASS",
     },
     {
       text: "I used Node.js and Express to build a fast and scalable back-end, handling API requests, managing routes, and integrating with the database efficiently.",
-      src: "/skills_svgs/nodejs.svg",
+      src: "/skills/nodejs.svg",
       label: "Node.js Express",
     },
     {
       text: "An AWS Lambda function runs the Node.js code that powers the APIs, offering a serverless approach for better scalability and performance.",
-      src: "/skills_svgs/Lambda.svg",
+      src: "/skills/Lambda.svg",
       label: "AWS Lambda",
     },
     {
       text: "I store and manage data in MongoDB, a flexible NoSQL database that enables efficient querying and scalability for my application.",
-      src: "/skills_svgs/mongodb.svg",
+      src: "/skills/mongodb.svg",
       label: "MongoDB",
     },
     {
       text: "I leveraged Bootstrap to quickly design a responsive and modern user interface, utilizing its pre-built components and grid system for consistency and flexibility.",
-      src: "/skills_svgs/bootstrap.svg",
+      src: "/skills/bootstrap.svg",
       label: "Bootstrap",
     },
   ];

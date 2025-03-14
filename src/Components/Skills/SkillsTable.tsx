@@ -10,16 +10,16 @@ export default function Skills() {
   const [secondFadeIn, setSecondFadeIn] = useState<boolean>(false);
 
   const techStack = [
-    { label: "Git Version Control", src: "/skills_svgs/git.svg" },
-    { label: "JavaScript", src: "/skills_svgs/js.svg" },
-    { label: "TypeScript", src: "/skills_svgs/ts.svg" },
-    { label: "React", src: "/skills_svgs/react.svg" },
-    { label: "Angular", src: "/skills_svgs/angular.svg" },
-    { label: "Node.js", src: "/skills_svgs/nodejs.svg" },
-    { label: "C++", src: "/skills_svgs/C++.svg" },
-    { label: "AWS", src: "/skills_svgs/aws.svg" },
-    { label: "Docker", src: "/skills_svgs/docker.svg" },
-    { label: "MongoDB", src: "/skills_svgs/mongodb.svg" },
+    { label: "Git Version Control", src: "/skills/git.svg" },
+    { label: "JavaScript", src: "/skills/js.svg" },
+    { label: "TypeScript", src: "/skills/ts.svg" },
+    { label: "React", src: "/skills/react.svg" },
+    { label: "Angular", src: "/skills/angular.svg" },
+    { label: "Node.js", src: "/skills/nodejs.svg" },
+    { label: "C++", src: "/skills/C++.svg" },
+    { label: "AWS", src: "/skills/aws.svg" },
+    { label: "Docker", src: "/skills/docker.svg" },
+    { label: "MongoDB", src: "/skills/mongodb.svg" },
   ];
 
   const [indexCounter, setIndexCounter] = useState(-1);

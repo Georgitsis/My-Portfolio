@@ -9,32 +9,32 @@ export default function Meet() {
   const techStack = [
     {
       text: "The project's frontend is built with React, a JavaScript library for creating dynamic and reusable user interfaces.",
-      src: "/skills_svgs/react.svg",
+      src: "/skills/react.svg",
       label: "React",
     },
     {
       text: "OAuth 2.0 is a secure authorization framework that grants limited access via tokens without sharing credentials.",
-      src: "/skills_svgs/oauth.svg",
+      src: "/skills/oauth.svg",
       label: "Oauth 2.0",
     },
     {
       text: "AWS Lambda function runs the Python code that powers the APIs, offering a serverless approach for better scalability and performance.",
-      src: "/skills_svgs/Lambda.svg",
+      src: "/skills/Lambda.svg",
       label: "AWS Lambda",
     },
     {
       text: "Google Cloud provides tools for integrating Google services, like Maps and Calendar, into applications, allowing access to data and features programmatically.",
-      src: "/skills_svgs/google_cloud.svg",
+      src: "/skills/google_cloud.svg",
       label: "Google Cloud",
     },
     {
       text: "Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.",
-      src: "/skills_svgs/jest.svg",
+      src: "/skills/jest.svg",
       label: "Jest",
     },
     {
       text: "Recharts is a React charting library built on D3.js, offering customizable and responsive charts.",
-      src: "/skills_svgs/recharts.svg",
+      src: "/skills/recharts.svg",
       label: "Rechart",
     },
   ];

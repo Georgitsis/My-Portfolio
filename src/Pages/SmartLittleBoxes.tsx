@@ -9,57 +9,57 @@ export default function SmartLittleBoxes() {
   const techStack = [
     {
       text: "The project's frontend is built with React, a JavaScript library for creating dynamic and reusable user interfaces.",
-      src: "/skills_svgs/react.svg",
+      src: "/skills/react.svg",
       label: "React",
     },
     {
       text: "TypeScript is used for type safety.",
-      src: "/skills_svgs/ts.svg",
+      src: "/skills/ts.svg",
       label: "TypeScript",
     },
     {
       text: "Mantine offers a comprehensive styling solution, a wide range of UI components, and a flexible design system for building modern and responsive interfaces.",
-      src: "/skills_svgs/mantine-seeklogo.svg",
+      src: "/skills/mantine-seeklogo.svg",
       label: "Mantine",
     },
     {
       text: "Cognito is used in the project for handling user authentication and managing access control.",
-      src: "/skills_svgs/Cognito.svg",
+      src: "/skills/Cognito.svg",
       label: "Cognito",
     },
     {
       text: "A S3 Bucket is used to store static frontend assets, such as HTML, CSS, and JavaScript files.",
-      src: "/skills_svgs/s3.svg",
+      src: "/skills/s3.svg",
       label: "S3",
     },
     {
       text: "Python's FastAPI is used in my project for building high-performance, asynchronous backend APIs.",
-      src: "/skills_svgs/python.svg",
+      src: "/skills/python.svg",
       label: "FastAPI",
     },
     {
       text: "AWS Lambda function runs the Python code that powers the APIs, offering a serverless approach for better scalability and performance.",
-      src: "/skills_svgs/Lambda.svg",
+      src: "/skills/Lambda.svg",
       label: "AWS Lambda",
     },
     {
       text: "The project uses DynamoDB for scalable and fast data storage and retrieval.",
-      src: "/skills_svgs/DynamoDB.svg",
+      src: "/skills/DynamoDB.svg",
       label: "DynamoDB",
     },
     {
       text: "Amazon Route 53 is used in my project for managing the DNS, ensuring reliable and efficient routing of traffic to the appropriate resources.",
-      src: "/skills_svgs/route53.svg",
+      src: "/skills/route53.svg",
       label: "Route 53",
     },
     {
       text: "Amazon CloudFront is used as a content delivery network, optimizing the delivery of static assets like images, CSS, and JavaScript to users across the globe.",
-      src: "/skills_svgs/CloudFront.svg",
+      src: "/skills/CloudFront.svg",
       label: "CloudFront",
     },
     {
       text: "A CI/CD pipeline is implemented on Git to automate the process of testing, building, and deploying the project, ensuring faster and more reliable releases.",
-      src: "/skills_svgs/ci-cd.svg",
+      src: "/skills/ci-cd.svg",
       label: "CI/CD",
     },
   ];

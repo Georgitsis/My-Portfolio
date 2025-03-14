@@ -9,17 +9,17 @@ export default function MyFlixBackend() {
   const techStack = [
     {
       text: "I used Node.js and Express to build a fast and scalable back-end, handling API requests, managing routes, and integrating with the database efficiently.",
-      src: "/skills_svgs/nodejs.svg",
+      src: "/skills/nodejs.svg",
       label: "Node.js Express",
     },
     {
       text: "An AWS Lambda function runs the Node.js code that powers the APIs, offering a serverless approach for better scalability and performance.",
-      src: "/skills_svgs/Lambda.svg",
+      src: "/skills/Lambda.svg",
       label: "AWS Lambda",
     },
     {
       text: "I store and manage data in MongoDB, a flexible NoSQL database that enables efficient querying and scalability for my application.",
-      src: "/skills_svgs/mongodb.svg",
+      src: "/skills/mongodb.svg",
       label: "MongoDB",
     },
   ];

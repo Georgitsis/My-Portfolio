@@ -9,12 +9,12 @@ export default function Chat() {
   const techStack = [
     {
       text: "The project is  realized with React Native a framework for building cross-platform mobile apps using JavaScript and React.",
-      src: "/skills_svgs/react.svg",
+      src: "/skills/react.svg",
       label: "React Native",
     },
     {
       text: "Gifted Chat was used to create a customizable chat interface with real-time messaging, including message bubbles, avatars, and quick replies.",
-      src: "/skills_svgs/gifted_chat.svg",
+      src: "/skills/gifted_chat.svg",
       label: "Gifted Chat",
     },
     {
