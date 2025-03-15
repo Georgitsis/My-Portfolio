@@ -63,7 +63,7 @@ export default function Projects() {
   return (
     <Stack maw={1280} mx={"auto"}>
       <Text
-        size={"10vw"}
+        size={"9vw"}
         mx={"auto"}
         ref={projectsHeaderRef}
         mb={"xl"}
