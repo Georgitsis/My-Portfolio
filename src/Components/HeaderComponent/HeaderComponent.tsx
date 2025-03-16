@@ -1,5 +1,5 @@
 import { Group, Anchor, Transition, Image } from "@mantine/core";
-import { useHover } from "@mantine/hooks";
+import { useHover, useViewportSize } from "@mantine/hooks";
 import { FaRegMessage } from "react-icons/fa6";
 import classes from "./ComponentStyles.module.css";
 import { TbFileCv } from "react-icons/tb";
@@ -10,6 +10,7 @@ interface HeaderComponentProps {
 export default function HeaderComponent({
   startInitialTransitions,
 }: HeaderComponentProps) {
+  const { width } = useViewportSize();
   return (
     <Transition
       mounted={startInitialTransitions}
@@ -35,7 +36,7 @@ export default function HeaderComponent({
             style={{
               color: "inherit",
             }}>
-            <FaRegMessage size="48" />
+            <FaRegMessage size={width > 576 ? "48" : "32"} />
           </Anchor>
         </Group>
       )}
@@ -45,10 +46,13 @@ export default function HeaderComponent({
 
 function CvFileHeaderComponent() {
   const { hovered, ref } = useHover();
+  const { width } = useViewportSize();
+  console.log(width);
+  console.log(typeof width);
 
   return (
     <Group ref={ref}>
-      <TbFileCv size="48" />
+      <TbFileCv size={width > 576 ? "48" : "32"} />
       <Transition
         mounted={hovered}
         transition="fade-right"
