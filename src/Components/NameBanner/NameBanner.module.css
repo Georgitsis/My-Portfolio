@@ -31,6 +31,12 @@
   transition-delay: 0.4s;
 }
 
+@media (max-width: 575.98px) {
+  .FingerToRight {
+    display: none;
+  }
+}
+
 .FingerToButtom {
   display: inline-block;
   position: absolute;

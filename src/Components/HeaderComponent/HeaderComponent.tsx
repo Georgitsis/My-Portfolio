@@ -47,8 +47,6 @@ export default function HeaderComponent({
 function CvFileHeaderComponent() {
   const { hovered, ref } = useHover();
   const { width } = useViewportSize();
-  console.log(width);
-  console.log(typeof width);
 
   return (
     <Group ref={ref}>

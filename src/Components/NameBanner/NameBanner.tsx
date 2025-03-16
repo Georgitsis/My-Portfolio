@@ -30,7 +30,7 @@ export default function BannerComponent({
   useEffect(() => {
     setTimeout(() => {
       setShowFirstPointer(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (
