@@ -38,7 +38,7 @@ export default function Chat() {
     <ProjectShell>
       <ProjectHeader
         headerText="Chat App"
-        imageSrc="/chat/ChatApp.png"></ProjectHeader>
+        imageSrc="/chat/chat_app.png"></ProjectHeader>
       <ProjectLinks
         caseStudyLink="/files/CaseStudy.pdf"
         gitHubLink="https://github.com/Georgitsis/chat-app"></ProjectLinks>
