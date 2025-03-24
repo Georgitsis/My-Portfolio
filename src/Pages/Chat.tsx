@@ -19,17 +19,17 @@ export default function Chat() {
     },
     {
       text: "Cloud Firestore is a NoSQL database by Google Firebase, that I used for storing and syncing data in real-time for web and mobile apps.",
-      src: "/chat/firebase.svg",
+      src: "/skills/firebase.svg",
       label: "Cloud Firestore",
     },
     {
       text: "Android Studio Emulator is a tool for simulating Android devices on a computer, that allowed me to test the Android app without needing several physical devices.",
-      src: "/chat/androidstudio.svg",
+      src: "/skills/androidstudio.svg",
       label: "Android Studio Emulator",
     },
     {
       text: "Expo and the accompanying Expo Go were used in my app to simplify development and testing. Expo provided the tools for building, while Expo Go allowed quick previewing and testing on real devices.",
-      src: "/chat/expo.svg",
+      src: "/skills/expo.svg",
       label: "Expo",
     },
   ];
