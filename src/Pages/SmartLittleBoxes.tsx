@@ -72,7 +72,7 @@ export default function SmartLittleBoxes() {
       <ProjectLinks
         webSiteLink="https://smartlittleboxes.com"
         gitHubLink="https://github.com/0hh/where-is-my-shit-24"
-        webSiteInfo="(username: user1, password: 123456. Registration isn not available yet.)"></ProjectLinks>
+        webSiteInfo="(username: user1, password: 123456. Test user with some data.)"></ProjectLinks>
       <StackContainer>
         <Title size={"5vw"} style={{ textAlign: "center" }}>
           About the Project
