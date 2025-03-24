@@ -59,7 +59,7 @@ function CvFileHeaderComponent() {
         {(styles) => (
           <Group style={styles}>
             <Anchor
-              href="/files/CV_eng.pdf"
+              href="/files/Theodoros_Georgitsis_CV_EN.pdf"
               target="_blank"
               underline="never"
               style={{ color: "inherit" }}
@@ -67,7 +67,7 @@ function CvFileHeaderComponent() {
               <Image w="32px" src="/flags/eng_flag.svg" />
             </Anchor>
             <Anchor
-              href="/files/CV_ger.pdf"
+              href="/files/Theodoros_Georgitsis_CV_DE.pdf"
               target="_blank"
               underline="never"
               style={{ color: "inherit" }}
@@ -75,7 +75,7 @@ function CvFileHeaderComponent() {
               <Image w="32px" src="/flags/ger_flag.svg" />
             </Anchor>
             <Anchor
-              href="/files/CV_nor.pdf"
+              href="/files/Theodoros_Georgitsis_CV_NO.pdf"
               target="_blank"
               underline="never"
               style={{ color: "inherit" }}
