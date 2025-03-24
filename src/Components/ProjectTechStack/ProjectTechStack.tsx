@@ -9,7 +9,7 @@ const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
   return (
     <>
       <Title size={"5vw"} style={{ textAlign: "center" }}>
-        The Projects Tech Stack
+        The Project's Tech Stack
       </Title>
       <Grid
         mt={"xl"}
