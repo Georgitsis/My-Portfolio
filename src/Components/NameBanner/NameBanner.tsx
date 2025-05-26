@@ -61,7 +61,7 @@ export default function BannerComponent({
             className={`${classes.BannerName} ${
               startInitialTransitions ? classes.BannerNameTransitioned : ""
             }`}>
-            THEODOROS GEORGITSIS
+            THEO GEORGITSIS
           </Text>
           <Transition
             mounted={startInitialTransitions}
