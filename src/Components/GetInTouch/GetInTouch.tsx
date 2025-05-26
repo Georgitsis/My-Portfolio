@@ -38,7 +38,7 @@ export default function GetInTouch() {
       </Text>{" "}
       <Anchor
         ref={anchorRef}
-        href="mailto:georgitsis.theodoros@gmail.com"
+        href="mailto:theo.georgitsis@protonmail.com"
         underline="never"
         px={"xl"}
         style={{
@@ -54,7 +54,7 @@ export default function GetInTouch() {
           position: "relative",
           bottom: `${textOfset}px`,
         }}>
-        georgitsis.theodoros@gmail.com
+        theo.georgitsis@protonmail.com
       </Anchor>
     </Stack>
   );

@@ -89,7 +89,7 @@ export default function BannerComponent({
                   <Anchor
                     ref={anchorRef}
                     className={`${classes.BannerSubText}`}
-                    href="mailto:georgitsis.theodoros@gmail.com"
+                    href="mailto:theo.georgitsis@protonmail.com"
                     underline="never"
                     px={"xl"}
                     style={{

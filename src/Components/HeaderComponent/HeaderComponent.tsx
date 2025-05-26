@@ -32,7 +32,7 @@ export default function HeaderComponent({
           <CvFileHeaderComponent />
 
           <Anchor
-            href="mailto:georgitsis.theodoros@gmail.com"
+            href="mailto:theo.georgitsis@protonmail.com"
             style={{
               color: "inherit",
             }}>
