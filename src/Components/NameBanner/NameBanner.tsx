@@ -78,7 +78,7 @@ export default function BannerComponent({
                   top: "calc(-1 * clamp(1px, 3.75vw, 50px))",
                 }}>
                 <Text className={`${classes.BannerSubText}`}>
-                  Full Stack Developer
+                  Web Developer
                 </Text>
                 <Group>
                   <LiaHandPointRightSolid

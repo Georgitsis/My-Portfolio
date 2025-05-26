@@ -14,15 +14,14 @@ export default function Introduction() {
     "I'm ",
     "Theo, ",
     "a ",
-    "full-",
-    "stack ",
+    "web ",
     "developer ",
-    "based ",
-    "in ",
-    "the ",
-    "Oslo ",
-    "area, ",
-    "Norway.",
+    "passionate ",
+    "about ",
+    "creating ",
+    "meaningful ",
+    "digital ",
+    "experiences.",
   ]);
   const [animatedSpans, setAnimatedSpans] = useState<string[]>([]);
 
@@ -83,11 +82,11 @@ export default function Introduction() {
           alignSelf: "flex-start",
           opacity: "0",
         }}>
-        I've always been passionate about technology, and now I'm focusing on my
-        new career in web development. While I'm still gaining experience, I've
-        successfully tackled challenges and built the features I've set out to
-        create. I'm committed to learning, improving, and delivering
-        user-focused digital experiences.
+        I'm focused on advancing my career in web development. While I'm still
+        growing my experience, I've consistently met challenges head-on and
+        brought ideas to life through functional, user-centered features. I'm
+        driven by continuous learning, technical improvement, and delivering
+        polished, purposeful solutions.
       </Text>
     </Stack>
   );
