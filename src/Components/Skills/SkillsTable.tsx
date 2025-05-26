@@ -77,7 +77,7 @@ export default function Skills() {
           textAlign: "center",
           alignSelf: "center",
         }}>
-        Full-Stack Mastery: A Balance of Depth & Breadth
+        My Tech Stack: Building the Web, One Layer at a Time
       </Text>
       <Space h="md" />
       <SimpleGrid
