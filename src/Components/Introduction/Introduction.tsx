@@ -82,11 +82,11 @@ export default function Introduction() {
           alignSelf: "flex-start",
           opacity: "0",
         }}>
-        I'm focused on advancing my career in web development. While I'm still
-        growing my experience, I've consistently met challenges head-on and
-        brought ideas to life through functional, user-centered features. I'm
-        driven by continuous learning, technical improvement, and delivering
-        polished, purposeful solutions.
+        I'm focused on creating thoughtful, user-centered web solutions that
+        solve real problems. I approach challenges with curiosity and
+        determination, turning ideas into functional features with clean,
+        purposeful code. I'm committed to continuous growth, technical
+        excellence, and delivering polished digital experiences.
       </Text>
     </Stack>
   );
